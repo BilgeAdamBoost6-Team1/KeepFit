@@ -29,17 +29,25 @@ namespace KeepFit.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
-            this.btnSil = new MetroSet_UI.Controls.MetroSetButton();
-            this.btnDuzenle = new MetroSet_UI.Controls.MetroSetButton();
-            this.btnAddFood = new MetroSet_UI.Controls.MetroSetButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cmbLifeStyle = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.cmbOgunleriListele = new MetroSet_UI.Controls.MetroSetComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.btnAddMeal = new MetroSet_UI.Controls.MetroSetButton();
+            this.dtpMealDate = new System.Windows.Forms.DateTimePicker();
+            this.dgvOgunlerim = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteMealToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateMealToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvListelenecekYemek = new System.Windows.Forms.DataGridView();
+            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.MealId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MealType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOgunlerim)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListelenecekYemek)).BeginInit();
             this.SuspendLayout();
             // 
             // metroSetControlBox1
@@ -50,7 +58,7 @@ namespace KeepFit.UI
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
             this.metroSetControlBox1.IsDerivedStyle = true;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(1088, 20);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(974, 11);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -68,177 +76,172 @@ namespace KeepFit.UI
             this.metroSetControlBox1.ThemeAuthor = "Narwin";
             this.metroSetControlBox1.ThemeName = "MetroLite";
             // 
-            // btnSil
+            // btnAddMeal
             // 
-            this.btnSil.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnSil.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnSil.DisabledForeColor = System.Drawing.Color.Gray;
-            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSil.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnSil.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnSil.HoverTextColor = System.Drawing.Color.White;
-            this.btnSil.IsDerivedStyle = true;
-            this.btnSil.Location = new System.Drawing.Point(1042, 452);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnSil.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnSil.NormalTextColor = System.Drawing.Color.White;
-            this.btnSil.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnSil.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnSil.PressTextColor = System.Drawing.Color.White;
-            this.btnSil.Size = new System.Drawing.Size(93, 21);
-            this.btnSil.Style = MetroSet_UI.Enums.Style.Light;
-            this.btnSil.StyleManager = null;
-            this.btnSil.TabIndex = 1;
-            this.btnSil.Text = "Delete Meal";
-            this.btnSil.ThemeAuthor = "Narwin";
-            this.btnSil.ThemeName = "MetroLite";
+            this.btnAddMeal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddMeal.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddMeal.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddMeal.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnAddMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAddMeal.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAddMeal.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAddMeal.HoverTextColor = System.Drawing.Color.White;
+            this.btnAddMeal.IsDerivedStyle = true;
+            this.btnAddMeal.Location = new System.Drawing.Point(15, 474);
+            this.btnAddMeal.Name = "btnAddMeal";
+            this.btnAddMeal.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddMeal.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddMeal.NormalTextColor = System.Drawing.Color.White;
+            this.btnAddMeal.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAddMeal.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAddMeal.PressTextColor = System.Drawing.Color.White;
+            this.btnAddMeal.Size = new System.Drawing.Size(93, 23);
+            this.btnAddMeal.Style = MetroSet_UI.Enums.Style.Light;
+            this.btnAddMeal.StyleManager = null;
+            this.btnAddMeal.TabIndex = 3;
+            this.btnAddMeal.Text = "Add Meal";
+            this.btnAddMeal.ThemeAuthor = "Narwin";
+            this.btnAddMeal.ThemeName = "MetroLite";
+            this.btnAddMeal.Click += new System.EventHandler(this.btnAddMeal_Click);
             // 
-            // btnDuzenle
+            // dtpMealDate
             // 
-            this.btnDuzenle.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnDuzenle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnDuzenle.DisabledForeColor = System.Drawing.Color.Gray;
-            this.btnDuzenle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnDuzenle.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnDuzenle.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnDuzenle.HoverTextColor = System.Drawing.Color.White;
-            this.btnDuzenle.IsDerivedStyle = true;
-            this.btnDuzenle.Location = new System.Drawing.Point(556, 462);
-            this.btnDuzenle.Name = "btnDuzenle";
-            this.btnDuzenle.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnDuzenle.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnDuzenle.NormalTextColor = System.Drawing.Color.White;
-            this.btnDuzenle.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnDuzenle.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnDuzenle.PressTextColor = System.Drawing.Color.White;
-            this.btnDuzenle.Size = new System.Drawing.Size(93, 23);
-            this.btnDuzenle.Style = MetroSet_UI.Enums.Style.Light;
-            this.btnDuzenle.StyleManager = null;
-            this.btnDuzenle.TabIndex = 2;
-            this.btnDuzenle.Text = "Update Meal";
-            this.btnDuzenle.ThemeAuthor = "Narwin";
-            this.btnDuzenle.ThemeName = "MetroLite";
+            this.dtpMealDate.Location = new System.Drawing.Point(879, 157);
+            this.dtpMealDate.Name = "dtpMealDate";
+            this.dtpMealDate.Size = new System.Drawing.Size(265, 27);
+            this.dtpMealDate.TabIndex = 6;
+            this.dtpMealDate.ValueChanged += new System.EventHandler(this.dtpMealDate_ValueChanged);
             // 
-            // btnAddFood
+            // dgvOgunlerim
             // 
-            this.btnAddFood.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnAddFood.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnAddFood.DisabledForeColor = System.Drawing.Color.Gray;
-            this.btnAddFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnAddFood.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnAddFood.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnAddFood.HoverTextColor = System.Drawing.Color.White;
-            this.btnAddFood.IsDerivedStyle = true;
-            this.btnAddFood.Location = new System.Drawing.Point(15, 464);
-            this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnAddFood.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnAddFood.NormalTextColor = System.Drawing.Color.White;
-            this.btnAddFood.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnAddFood.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnAddFood.PressTextColor = System.Drawing.Color.White;
-            this.btnAddFood.Size = new System.Drawing.Size(93, 23);
-            this.btnAddFood.Style = MetroSet_UI.Enums.Style.Light;
-            this.btnAddFood.StyleManager = null;
-            this.btnAddFood.TabIndex = 3;
-            this.btnAddFood.Text = "Add Food";
-            this.btnAddFood.ThemeAuthor = "Narwin";
-            this.btnAddFood.ThemeName = "MetroLite";
+            this.dgvOgunlerim.AllowUserToAddRows = false;
+            this.dgvOgunlerim.AllowUserToDeleteRows = false;
+            this.dgvOgunlerim.AllowUserToResizeColumns = false;
+            this.dgvOgunlerim.AllowUserToResizeRows = false;
+            this.dgvOgunlerim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOgunlerim.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvOgunlerim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOgunlerim.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MealId,
+            this.MealName,
+            this.MealType});
+            this.dgvOgunlerim.ContextMenuStrip = this.contextMenuStrip1;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOgunlerim.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvOgunlerim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dgvOgunlerim.Location = new System.Drawing.Point(15, 197);
+            this.dgvOgunlerim.MultiSelect = false;
+            this.dgvOgunlerim.Name = "dgvOgunlerim";
+            this.dgvOgunlerim.ReadOnly = true;
+            this.dgvOgunlerim.RowHeadersVisible = false;
+            this.dgvOgunlerim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOgunlerim.Size = new System.Drawing.Size(478, 256);
+            this.dgvOgunlerim.TabIndex = 8;
+            this.dgvOgunlerim.SelectionChanged += new System.EventHandler(this.dgvOgunlerim_SelectionChanged);
+            this.dgvOgunlerim.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvOgunlerim_MouseDown);
             // 
-            // dateTimePicker1
+            // contextMenuStrip1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(935, 128);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
-            this.dateTimePicker1.TabIndex = 6;
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteMealToolStripMenuItem,
+            this.updateMealToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(142, 48);
             // 
-            // cmbLifeStyle
+            // deleteMealToolStripMenuItem
             // 
-            this.cmbLifeStyle.AllowDrop = true;
-            this.cmbLifeStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.cmbLifeStyle.BackColor = System.Drawing.Color.Transparent;
-            this.cmbLifeStyle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.cmbLifeStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.cmbLifeStyle.CausesValidation = false;
-            this.cmbLifeStyle.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cmbLifeStyle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.cmbLifeStyle.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.cmbLifeStyle.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbLifeStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLifeStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.cmbLifeStyle.FormattingEnabled = true;
-            this.cmbLifeStyle.IsDerivedStyle = true;
-            this.cmbLifeStyle.ItemHeight = 20;
-            this.cmbLifeStyle.Location = new System.Drawing.Point(327, 131);
-            this.cmbLifeStyle.Name = "cmbLifeStyle";
-            this.cmbLifeStyle.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.cmbLifeStyle.SelectedItemForeColor = System.Drawing.Color.White;
-            this.cmbLifeStyle.Size = new System.Drawing.Size(139, 26);
-            this.cmbLifeStyle.Style = MetroSet_UI.Enums.Style.Light;
-            this.cmbLifeStyle.StyleManager = null;
-            this.cmbLifeStyle.TabIndex = 7;
-            this.cmbLifeStyle.ThemeAuthor = "Narwin";
-            this.cmbLifeStyle.ThemeName = "MetroLite";
+            this.deleteMealToolStripMenuItem.Name = "deleteMealToolStripMenuItem";
+            this.deleteMealToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.deleteMealToolStripMenuItem.Text = "Delete Meal";
+            this.deleteMealToolStripMenuItem.Click += new System.EventHandler(this.deleteMealToolStripMenuItem_Click);
             // 
-            // dataGridView1
+            // updateMealToolStripMenuItem
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 178);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(451, 256);
-            this.dataGridView1.TabIndex = 8;
+            this.updateMealToolStripMenuItem.Name = "updateMealToolStripMenuItem";
+            this.updateMealToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.updateMealToolStripMenuItem.Text = "Update Meal";
+            this.updateMealToolStripMenuItem.Click += new System.EventHandler(this.updateMealToolStripMenuItem_Click);
             // 
-            // dataGridView2
+            // dgvListelenecekYemek
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(556, 178);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(579, 256);
-            this.dataGridView2.TabIndex = 9;
+            this.dgvListelenecekYemek.AllowUserToAddRows = false;
+            this.dgvListelenecekYemek.AllowUserToDeleteRows = false;
+            this.dgvListelenecekYemek.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListelenecekYemek.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvListelenecekYemek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListelenecekYemek.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FoodName});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListelenecekYemek.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvListelenecekYemek.Location = new System.Drawing.Point(565, 197);
+            this.dgvListelenecekYemek.Name = "dgvListelenecekYemek";
+            this.dgvListelenecekYemek.ReadOnly = true;
+            this.dgvListelenecekYemek.RowHeadersVisible = false;
+            this.dgvListelenecekYemek.Size = new System.Drawing.Size(579, 256);
+            this.dgvListelenecekYemek.TabIndex = 9;
             // 
-            // cmbOgunleriListele
+            // FoodName
             // 
-            this.cmbOgunleriListele.AllowDrop = true;
-            this.cmbOgunleriListele.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.cmbOgunleriListele.BackColor = System.Drawing.Color.Transparent;
-            this.cmbOgunleriListele.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.cmbOgunleriListele.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.cmbOgunleriListele.CausesValidation = false;
-            this.cmbOgunleriListele.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cmbOgunleriListele.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.cmbOgunleriListele.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.cmbOgunleriListele.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbOgunleriListele.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbOgunleriListele.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.cmbOgunleriListele.FormattingEnabled = true;
-            this.cmbOgunleriListele.IsDerivedStyle = true;
-            this.cmbOgunleriListele.ItemHeight = 20;
-            this.cmbOgunleriListele.Location = new System.Drawing.Point(15, 128);
-            this.cmbOgunleriListele.Name = "cmbOgunleriListele";
-            this.cmbOgunleriListele.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.cmbOgunleriListele.SelectedItemForeColor = System.Drawing.Color.White;
-            this.cmbOgunleriListele.Size = new System.Drawing.Size(139, 26);
-            this.cmbOgunleriListele.Style = MetroSet_UI.Enums.Style.Light;
-            this.cmbOgunleriListele.StyleManager = null;
-            this.cmbOgunleriListele.TabIndex = 10;
-            this.cmbOgunleriListele.ThemeAuthor = "Narwin";
-            this.cmbOgunleriListele.ThemeName = "MetroLite";
+            this.FoodName.HeaderText = "Food Name";
+            this.FoodName.Name = "FoodName";
+            this.FoodName.ReadOnly = true;
+            // 
+            // metroSetLabel1
+            // 
+            this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel1.IsDerivedStyle = true;
+            this.metroSetLabel1.Location = new System.Drawing.Point(565, 161);
+            this.metroSetLabel1.Name = "metroSetLabel1";
+            this.metroSetLabel1.Size = new System.Drawing.Size(100, 23);
+            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetLabel1.StyleManager = null;
+            this.metroSetLabel1.TabIndex = 10;
+            this.metroSetLabel1.Text = "Meal Foods";
+            this.metroSetLabel1.ThemeAuthor = "Narwin";
+            this.metroSetLabel1.ThemeName = "MetroLite";
+            // 
+            // MealId
+            // 
+            this.MealId.HeaderText = "Meal Id";
+            this.MealId.Name = "MealId";
+            this.MealId.ReadOnly = true;
+            this.MealId.Visible = false;
+            // 
+            // MealName
+            // 
+            this.MealName.HeaderText = "Meal Name";
+            this.MealName.Name = "MealName";
+            this.MealName.ReadOnly = true;
+            // 
+            // MealType
+            // 
+            this.MealType.HeaderText = "Meal Type";
+            this.MealType.Name = "MealType";
+            this.MealType.ReadOnly = true;
             // 
             // MealCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1188, 516);
-            this.Controls.Add(this.cmbOgunleriListele);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.cmbLifeStyle);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.btnAddFood);
-            this.Controls.Add(this.btnDuzenle);
-            this.Controls.Add(this.btnSil);
+            this.ClientSize = new System.Drawing.Size(1162, 513);
+            this.Controls.Add(this.metroSetLabel1);
+            this.Controls.Add(this.dgvListelenecekYemek);
+            this.Controls.Add(this.dgvOgunlerim);
+            this.Controls.Add(this.dtpMealDate);
+            this.Controls.Add(this.btnAddMeal);
             this.Controls.Add(this.metroSetControlBox1);
             this.Name = "MealCRUDForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -247,9 +250,9 @@ namespace KeepFit.UI
             this.TextColor = System.Drawing.Color.White;
             this.ThemeName = "MetroDark";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MealCRUDForm_FormClosing);
-            this.Load += new System.EventHandler(this.MealCRUDForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOgunlerim)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListelenecekYemek)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,13 +260,17 @@ namespace KeepFit.UI
         #endregion
 
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
-        private MetroSet_UI.Controls.MetroSetButton btnSil;
-        private MetroSet_UI.Controls.MetroSetButton btnDuzenle;
-        private MetroSet_UI.Controls.MetroSetButton btnAddFood;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private MetroSet_UI.Controls.MetroSetComboBox cmbLifeStyle;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private MetroSet_UI.Controls.MetroSetComboBox cmbOgunleriListele;
+        private MetroSet_UI.Controls.MetroSetButton btnAddMeal;
+        private System.Windows.Forms.DateTimePicker dtpMealDate;
+        private System.Windows.Forms.DataGridView dgvOgunlerim;
+        private System.Windows.Forms.DataGridView dgvListelenecekYemek;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteMealToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateMealToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FoodName;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MealId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MealName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MealType;
     }
 }
