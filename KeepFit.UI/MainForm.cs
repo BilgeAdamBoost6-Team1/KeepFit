@@ -58,7 +58,7 @@ namespace KeepFit.UI
             {
                 if (item.CreateTime.Date == dtpMealDate.Value.Date && item.UserId == logUser.UserId)
                 {
-                    decimal TotalCalorie = item.TotalCalorie;
+                     
                     ObservableCollection<MealsFoods> foods = item.Foods;
                     //TODO
                     //Meal kısmının ana paneli.
@@ -86,6 +86,7 @@ namespace KeepFit.UI
                         Left = 10,
                         BorderStyle = BorderStyle.FixedSingle,
                         AutoSize = true
+                        
                     };
                     FlowLayoutPanel foodList = new FlowLayoutPanel()
                     {
@@ -99,7 +100,7 @@ namespace KeepFit.UI
                     };
                     Label totalCalori = new Label()
                     {
-                        Text = "Meal Total Calorie :" + TotalCalorie,
+                        Text = "Meal Total Calorie :" + item.TotalCalorie,
                         Height = 10,
                         AutoSize = true,
                         Location = new Point(panel.Width - 230, label2.Top),
@@ -301,8 +302,10 @@ namespace KeepFit.UI
 
         private void btnAddMeal_Click(object sender, EventArgs e)
         {
-            MealForm mealForm = new MealForm(db, logUser);
-            mealForm.ShowDialog();
+            MealCRUDForm mealForm = new MealCRUDForm(db, logUser);           
+            DialogResult result=mealForm.ShowDialog();         
+            ListMeals();
+            FillCharts();
         }
 
         private void btnRaport_Click(object sender, EventArgs e)
@@ -319,7 +322,7 @@ namespace KeepFit.UI
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
+          
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

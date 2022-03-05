@@ -189,7 +189,7 @@
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
             this.metroSetControlBox1.IsDerivedStyle = true;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(858, 1);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(846, 17);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -265,7 +265,7 @@
             this.lbldailycal.BackColor = System.Drawing.Color.Transparent;
             this.lbldailycal.Location = new System.Drawing.Point(709, 146);
             this.lbldailycal.Name = "lbldailycal";
-            this.lbldailycal.Size = new System.Drawing.Size(15, 20);
+            this.lbldailycal.Size = new System.Drawing.Size(13, 17);
             this.lbldailycal.TabIndex = 2;
             this.lbldailycal.Text = "-";
             // 
@@ -276,7 +276,7 @@
             this.lblCalories.BackColor = System.Drawing.Color.Transparent;
             this.lblCalories.Location = new System.Drawing.Point(709, 120);
             this.lblCalories.Name = "lblCalories";
-            this.lblCalories.Size = new System.Drawing.Size(128, 20);
+            this.lblCalories.Size = new System.Drawing.Size(108, 17);
             this.lblCalories.TabIndex = 2;
             this.lblCalories.Text = "Total Calorie : 0";
             // 
@@ -286,7 +286,7 @@
             this.dtpMealDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpMealDate.Location = new System.Drawing.Point(787, 26);
             this.dtpMealDate.Name = "dtpMealDate";
-            this.dtpMealDate.Size = new System.Drawing.Size(115, 26);
+            this.dtpMealDate.Size = new System.Drawing.Size(115, 23);
             this.dtpMealDate.TabIndex = 1;
             this.dtpMealDate.ValueChanged += new System.EventHandler(this.dtpMealDate_ValueChanged);
             // 
@@ -407,7 +407,7 @@
             this.lblUsersSnachFood.AutoSize = true;
             this.lblUsersSnachFood.Location = new System.Drawing.Point(331, 325);
             this.lblUsersSnachFood.Name = "lblUsersSnachFood";
-            this.lblUsersSnachFood.Size = new System.Drawing.Size(15, 20);
+            this.lblUsersSnachFood.Size = new System.Drawing.Size(13, 17);
             this.lblUsersSnachFood.TabIndex = 2;
             this.lblUsersSnachFood.Text = "-";
             // 
@@ -481,7 +481,7 @@
             this.lblUsersSupperFood.AutoSize = true;
             this.lblUsersSupperFood.Location = new System.Drawing.Point(331, 284);
             this.lblUsersSupperFood.Name = "lblUsersSupperFood";
-            this.lblUsersSupperFood.Size = new System.Drawing.Size(15, 20);
+            this.lblUsersSupperFood.Size = new System.Drawing.Size(13, 17);
             this.lblUsersSupperFood.TabIndex = 2;
             this.lblUsersSupperFood.Text = "-";
             // 
@@ -499,7 +499,7 @@
             this.lblUsersDinnerFood.AutoSize = true;
             this.lblUsersDinnerFood.Location = new System.Drawing.Point(331, 243);
             this.lblUsersDinnerFood.Name = "lblUsersDinnerFood";
-            this.lblUsersDinnerFood.Size = new System.Drawing.Size(15, 20);
+            this.lblUsersDinnerFood.Size = new System.Drawing.Size(13, 17);
             this.lblUsersDinnerFood.TabIndex = 2;
             this.lblUsersDinnerFood.Text = "-";
             // 
@@ -517,7 +517,7 @@
             this.lblUsersLunchFood.AutoSize = true;
             this.lblUsersLunchFood.Location = new System.Drawing.Point(331, 202);
             this.lblUsersLunchFood.Name = "lblUsersLunchFood";
-            this.lblUsersLunchFood.Size = new System.Drawing.Size(15, 20);
+            this.lblUsersLunchFood.Size = new System.Drawing.Size(13, 17);
             this.lblUsersLunchFood.TabIndex = 2;
             this.lblUsersLunchFood.Text = "-";
             // 
@@ -544,7 +544,7 @@
             this.lblUsersBrunchFood.AutoSize = true;
             this.lblUsersBrunchFood.Location = new System.Drawing.Point(331, 161);
             this.lblUsersBrunchFood.Name = "lblUsersBrunchFood";
-            this.lblUsersBrunchFood.Size = new System.Drawing.Size(15, 20);
+            this.lblUsersBrunchFood.Size = new System.Drawing.Size(13, 17);
             this.lblUsersBrunchFood.TabIndex = 2;
             this.lblUsersBrunchFood.Text = "-";
             // 
@@ -562,7 +562,7 @@
             this.lblUsersBreakFastFood.AutoSize = true;
             this.lblUsersBreakFastFood.Location = new System.Drawing.Point(331, 120);
             this.lblUsersBreakFastFood.Name = "lblUsersBreakFastFood";
-            this.lblUsersBreakFastFood.Size = new System.Drawing.Size(15, 20);
+            this.lblUsersBreakFastFood.Size = new System.Drawing.Size(13, 17);
             this.lblUsersBreakFastFood.TabIndex = 2;
             this.lblUsersBreakFastFood.Text = "-";
             // 
@@ -707,7 +707,7 @@
             this.dtpWeekRaport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpWeekRaport.Location = new System.Drawing.Point(321, -3);
             this.dtpWeekRaport.Name = "dtpWeekRaport";
-            this.dtpWeekRaport.Size = new System.Drawing.Size(110, 26);
+            this.dtpWeekRaport.Size = new System.Drawing.Size(110, 23);
             this.dtpWeekRaport.TabIndex = 4;
             this.dtpWeekRaport.ValueChanged += new System.EventHandler(this.dtpWeekRaport_ValueChanged);
             // 
@@ -772,7 +772,7 @@
             this.lblSnachFood.AutoSize = true;
             this.lblSnachFood.Location = new System.Drawing.Point(326, 322);
             this.lblSnachFood.Name = "lblSnachFood";
-            this.lblSnachFood.Size = new System.Drawing.Size(15, 20);
+            this.lblSnachFood.Size = new System.Drawing.Size(13, 17);
             this.lblSnachFood.TabIndex = 2;
             this.lblSnachFood.Text = "-";
             // 
@@ -781,7 +781,7 @@
             this.lblSupperFood.AutoSize = true;
             this.lblSupperFood.Location = new System.Drawing.Point(326, 281);
             this.lblSupperFood.Name = "lblSupperFood";
-            this.lblSupperFood.Size = new System.Drawing.Size(15, 20);
+            this.lblSupperFood.Size = new System.Drawing.Size(13, 17);
             this.lblSupperFood.TabIndex = 2;
             this.lblSupperFood.Text = "-";
             // 
@@ -790,7 +790,7 @@
             this.lblDinnerFood.AutoSize = true;
             this.lblDinnerFood.Location = new System.Drawing.Point(326, 240);
             this.lblDinnerFood.Name = "lblDinnerFood";
-            this.lblDinnerFood.Size = new System.Drawing.Size(15, 20);
+            this.lblDinnerFood.Size = new System.Drawing.Size(13, 17);
             this.lblDinnerFood.TabIndex = 2;
             this.lblDinnerFood.Text = "-";
             // 
@@ -799,7 +799,7 @@
             this.lblLunchFood.AutoSize = true;
             this.lblLunchFood.Location = new System.Drawing.Point(326, 199);
             this.lblLunchFood.Name = "lblLunchFood";
-            this.lblLunchFood.Size = new System.Drawing.Size(15, 20);
+            this.lblLunchFood.Size = new System.Drawing.Size(13, 17);
             this.lblLunchFood.TabIndex = 2;
             this.lblLunchFood.Text = "-";
             // 
@@ -808,7 +808,7 @@
             this.lblBrunchFood.AutoSize = true;
             this.lblBrunchFood.Location = new System.Drawing.Point(326, 158);
             this.lblBrunchFood.Name = "lblBrunchFood";
-            this.lblBrunchFood.Size = new System.Drawing.Size(15, 20);
+            this.lblBrunchFood.Size = new System.Drawing.Size(13, 17);
             this.lblBrunchFood.TabIndex = 2;
             this.lblBrunchFood.Text = "-";
             // 
@@ -817,7 +817,7 @@
             this.lblBreakFastFood.AutoSize = true;
             this.lblBreakFastFood.Location = new System.Drawing.Point(326, 117);
             this.lblBreakFastFood.Name = "lblBreakFastFood";
-            this.lblBreakFastFood.Size = new System.Drawing.Size(15, 20);
+            this.lblBreakFastFood.Size = new System.Drawing.Size(13, 17);
             this.lblBreakFastFood.TabIndex = 2;
             this.lblBreakFastFood.Text = "-";
             // 
@@ -1108,7 +1108,7 @@
             this.lblUserSnackFoodMonth.AutoSize = true;
             this.lblUserSnackFoodMonth.Location = new System.Drawing.Point(326, 322);
             this.lblUserSnackFoodMonth.Name = "lblUserSnackFoodMonth";
-            this.lblUserSnackFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblUserSnackFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblUserSnackFoodMonth.TabIndex = 2;
             this.lblUserSnackFoodMonth.Text = "-";
             // 
@@ -1117,7 +1117,7 @@
             this.lblUserSupperFoodMonth.AutoSize = true;
             this.lblUserSupperFoodMonth.Location = new System.Drawing.Point(326, 281);
             this.lblUserSupperFoodMonth.Name = "lblUserSupperFoodMonth";
-            this.lblUserSupperFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblUserSupperFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblUserSupperFoodMonth.TabIndex = 2;
             this.lblUserSupperFoodMonth.Text = "-";
             // 
@@ -1126,7 +1126,7 @@
             this.lblUserDinnerFoodMonth.AutoSize = true;
             this.lblUserDinnerFoodMonth.Location = new System.Drawing.Point(326, 240);
             this.lblUserDinnerFoodMonth.Name = "lblUserDinnerFoodMonth";
-            this.lblUserDinnerFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblUserDinnerFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblUserDinnerFoodMonth.TabIndex = 2;
             this.lblUserDinnerFoodMonth.Text = "-";
             // 
@@ -1135,7 +1135,7 @@
             this.lblUserLunchFoodMonth.AutoSize = true;
             this.lblUserLunchFoodMonth.Location = new System.Drawing.Point(326, 199);
             this.lblUserLunchFoodMonth.Name = "lblUserLunchFoodMonth";
-            this.lblUserLunchFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblUserLunchFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblUserLunchFoodMonth.TabIndex = 2;
             this.lblUserLunchFoodMonth.Text = "-";
             // 
@@ -1144,7 +1144,7 @@
             this.lblUserBrunchFoodMonth.AutoSize = true;
             this.lblUserBrunchFoodMonth.Location = new System.Drawing.Point(326, 158);
             this.lblUserBrunchFoodMonth.Name = "lblUserBrunchFoodMonth";
-            this.lblUserBrunchFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblUserBrunchFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblUserBrunchFoodMonth.TabIndex = 2;
             this.lblUserBrunchFoodMonth.Text = "-";
             // 
@@ -1153,7 +1153,7 @@
             this.lblUserBreakFastFoodMonth.AutoSize = true;
             this.lblUserBreakFastFoodMonth.Location = new System.Drawing.Point(326, 117);
             this.lblUserBreakFastFoodMonth.Name = "lblUserBreakFastFoodMonth";
-            this.lblUserBreakFastFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblUserBreakFastFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblUserBreakFastFoodMonth.TabIndex = 2;
             this.lblUserBreakFastFoodMonth.Text = "-";
             // 
@@ -1409,7 +1409,7 @@
             this.lblAllSnackFoodMonth.AutoSize = true;
             this.lblAllSnackFoodMonth.Location = new System.Drawing.Point(331, 325);
             this.lblAllSnackFoodMonth.Name = "lblAllSnackFoodMonth";
-            this.lblAllSnackFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblAllSnackFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblAllSnackFoodMonth.TabIndex = 2;
             this.lblAllSnackFoodMonth.Text = "-";
             // 
@@ -1427,7 +1427,7 @@
             this.lblAllSupperFoodMonth.AutoSize = true;
             this.lblAllSupperFoodMonth.Location = new System.Drawing.Point(331, 284);
             this.lblAllSupperFoodMonth.Name = "lblAllSupperFoodMonth";
-            this.lblAllSupperFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblAllSupperFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblAllSupperFoodMonth.TabIndex = 2;
             this.lblAllSupperFoodMonth.Text = "-";
             // 
@@ -1445,7 +1445,7 @@
             this.lblAllDinnerFoodMonth.AutoSize = true;
             this.lblAllDinnerFoodMonth.Location = new System.Drawing.Point(331, 243);
             this.lblAllDinnerFoodMonth.Name = "lblAllDinnerFoodMonth";
-            this.lblAllDinnerFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblAllDinnerFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblAllDinnerFoodMonth.TabIndex = 2;
             this.lblAllDinnerFoodMonth.Text = "-";
             // 
@@ -1463,7 +1463,7 @@
             this.lblAllLunchFoodMonth.AutoSize = true;
             this.lblAllLunchFoodMonth.Location = new System.Drawing.Point(331, 202);
             this.lblAllLunchFoodMonth.Name = "lblAllLunchFoodMonth";
-            this.lblAllLunchFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblAllLunchFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblAllLunchFoodMonth.TabIndex = 2;
             this.lblAllLunchFoodMonth.Text = "-";
             // 
@@ -1490,7 +1490,7 @@
             this.lblAllBrunchFoodMonth.AutoSize = true;
             this.lblAllBrunchFoodMonth.Location = new System.Drawing.Point(331, 161);
             this.lblAllBrunchFoodMonth.Name = "lblAllBrunchFoodMonth";
-            this.lblAllBrunchFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblAllBrunchFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblAllBrunchFoodMonth.TabIndex = 2;
             this.lblAllBrunchFoodMonth.Text = "-";
             // 
@@ -1508,7 +1508,7 @@
             this.lblAllBreakFastFoodMonth.AutoSize = true;
             this.lblAllBreakFastFoodMonth.Location = new System.Drawing.Point(331, 120);
             this.lblAllBreakFastFoodMonth.Name = "lblAllBreakFastFoodMonth";
-            this.lblAllBreakFastFoodMonth.Size = new System.Drawing.Size(15, 20);
+            this.lblAllBreakFastFoodMonth.Size = new System.Drawing.Size(13, 17);
             this.lblAllBreakFastFoodMonth.TabIndex = 2;
             this.lblAllBreakFastFoodMonth.Text = "-";
             // 
@@ -1629,7 +1629,7 @@
             // RaportForm
             // 
             this.AllowResize = false;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BorderThickness = 3F;

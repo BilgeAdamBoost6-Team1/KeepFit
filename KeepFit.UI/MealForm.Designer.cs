@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAddMeal = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.cmbMealType = new MetroSet_UI.Controls.MetroSetComboBox();
@@ -67,11 +67,11 @@
             this.cmbUnit = new MetroSet_UI.Controls.MetroSetComboBox();
             this.btnDelete = new MetroSet_UI.Controls.MetroSetButton();
             this.btnDeleteUpdate = new MetroSet_UI.Controls.MetroSetButton();
-            this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel3 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel6 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel4 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.metroSetLabel7 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel5 = new MetroSet_UI.Controls.MetroSetLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgunListele)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEklenenOgun)).BeginInit();
@@ -230,6 +230,8 @@
             this.dgvOgunListele.AllowUserToDeleteRows = false;
             this.dgvOgunListele.AllowUserToResizeColumns = false;
             this.dgvOgunListele.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvOgunListele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOgunListele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOgunListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOgunListele.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -242,14 +244,6 @@
             this.Fat,
             this.Gram});
             this.dgvOgunListele.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOgunListele.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvOgunListele.Location = new System.Drawing.Point(3, 282);
             this.dgvOgunListele.Name = "dgvOgunListele";
             this.dgvOgunListele.ReadOnly = true;
@@ -311,6 +305,8 @@
             // 
             this.dgvEklenenOgun.AllowUserToAddRows = false;
             this.dgvEklenenOgun.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvEklenenOgun.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEklenenOgun.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEklenenOgun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEklenenOgun.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -322,14 +318,6 @@
             this.Carbohydrate1,
             this.Fat1,
             this.Gram1});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEklenenOgun.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEklenenOgun.Location = new System.Drawing.Point(593, 282);
             this.dgvEklenenOgun.Name = "dgvEklenenOgun";
             this.dgvEklenenOgun.ReadOnly = true;
@@ -608,34 +596,6 @@
             this.btnDeleteUpdate.ThemeName = "MetroLite";
             this.btnDeleteUpdate.Click += new System.EventHandler(this.btnDeleteUpdate_Click);
             // 
-            // metroSetLabel1
-            // 
-            this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel1.IsDerivedStyle = true;
-            this.metroSetLabel1.Location = new System.Drawing.Point(16, 104);
-            this.metroSetLabel1.Name = "metroSetLabel1";
-            this.metroSetLabel1.Size = new System.Drawing.Size(100, 23);
-            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetLabel1.StyleManager = null;
-            this.metroSetLabel1.TabIndex = 22;
-            this.metroSetLabel1.Text = "Meal Name :";
-            this.metroSetLabel1.ThemeAuthor = "Narwin";
-            this.metroSetLabel1.ThemeName = "MetroLite";
-            // 
-            // metroSetLabel2
-            // 
-            this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel2.IsDerivedStyle = true;
-            this.metroSetLabel2.Location = new System.Drawing.Point(16, 160);
-            this.metroSetLabel2.Name = "metroSetLabel2";
-            this.metroSetLabel2.Size = new System.Drawing.Size(100, 23);
-            this.metroSetLabel2.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetLabel2.StyleManager = null;
-            this.metroSetLabel2.TabIndex = 23;
-            this.metroSetLabel2.Text = "Meal Type :";
-            this.metroSetLabel2.ThemeAuthor = "Narwin";
-            this.metroSetLabel2.ThemeName = "MetroLite";
-            // 
             // metroSetLabel3
             // 
             this.metroSetLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -664,33 +624,65 @@
             this.metroSetLabel6.ThemeAuthor = "Narwin";
             this.metroSetLabel6.ThemeName = "MetroLite";
             // 
-            // metroSetLabel4
+            // metroSetLabel7
             // 
-            this.metroSetLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel4.IsDerivedStyle = true;
-            this.metroSetLabel4.Location = new System.Drawing.Point(3, 246);
-            this.metroSetLabel4.Name = "metroSetLabel4";
-            this.metroSetLabel4.Size = new System.Drawing.Size(100, 23);
-            this.metroSetLabel4.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetLabel4.StyleManager = null;
-            this.metroSetLabel4.TabIndex = 26;
-            this.metroSetLabel4.Text = "All Foods";
-            this.metroSetLabel4.ThemeAuthor = "Narwin";
-            this.metroSetLabel4.ThemeName = "MetroLite";
+            this.metroSetLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel7.IsDerivedStyle = true;
+            this.metroSetLabel7.Location = new System.Drawing.Point(16, 104);
+            this.metroSetLabel7.Name = "metroSetLabel7";
+            this.metroSetLabel7.Size = new System.Drawing.Size(100, 23);
+            this.metroSetLabel7.Style = MetroSet_UI.Enums.Style.Dark;
+            this.metroSetLabel7.StyleManager = null;
+            this.metroSetLabel7.TabIndex = 10;
+            this.metroSetLabel7.Tag = "";
+            this.metroSetLabel7.Text = "Meal Name :";
+            this.metroSetLabel7.ThemeAuthor = "Narwin";
+            this.metroSetLabel7.ThemeName = "MetroDark";
+            // 
+            // metroSetLabel1
+            // 
+            this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel1.IsDerivedStyle = true;
+            this.metroSetLabel1.Location = new System.Drawing.Point(16, 160);
+            this.metroSetLabel1.Name = "metroSetLabel1";
+            this.metroSetLabel1.Size = new System.Drawing.Size(100, 23);
+            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Dark;
+            this.metroSetLabel1.StyleManager = null;
+            this.metroSetLabel1.TabIndex = 10;
+            this.metroSetLabel1.Tag = "";
+            this.metroSetLabel1.Text = "Meal Type :";
+            this.metroSetLabel1.ThemeAuthor = "Narwin";
+            this.metroSetLabel1.ThemeName = "MetroDark";
+            // 
+            // metroSetLabel2
+            // 
+            this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel2.IsDerivedStyle = true;
+            this.metroSetLabel2.Location = new System.Drawing.Point(593, 246);
+            this.metroSetLabel2.Name = "metroSetLabel2";
+            this.metroSetLabel2.Size = new System.Drawing.Size(100, 23);
+            this.metroSetLabel2.Style = MetroSet_UI.Enums.Style.Dark;
+            this.metroSetLabel2.StyleManager = null;
+            this.metroSetLabel2.TabIndex = 10;
+            this.metroSetLabel2.Tag = "";
+            this.metroSetLabel2.Text = "Meal Foods:";
+            this.metroSetLabel2.ThemeAuthor = "Narwin";
+            this.metroSetLabel2.ThemeName = "MetroDark";
             // 
             // metroSetLabel5
             // 
             this.metroSetLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.metroSetLabel5.IsDerivedStyle = true;
-            this.metroSetLabel5.Location = new System.Drawing.Point(593, 246);
+            this.metroSetLabel5.Location = new System.Drawing.Point(3, 246);
             this.metroSetLabel5.Name = "metroSetLabel5";
             this.metroSetLabel5.Size = new System.Drawing.Size(100, 23);
-            this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Dark;
             this.metroSetLabel5.StyleManager = null;
-            this.metroSetLabel5.TabIndex = 27;
-            this.metroSetLabel5.Text = "Meal Foods";
+            this.metroSetLabel5.TabIndex = 10;
+            this.metroSetLabel5.Tag = "";
+            this.metroSetLabel5.Text = "All Foods:";
             this.metroSetLabel5.ThemeAuthor = "Narwin";
-            this.metroSetLabel5.ThemeName = "MetroLite";
+            this.metroSetLabel5.ThemeName = "MetroDark";
             // 
             // MealForm
             // 
@@ -698,12 +690,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1044, 816);
-            this.Controls.Add(this.metroSetLabel5);
-            this.Controls.Add(this.metroSetLabel4);
             this.Controls.Add(this.metroSetLabel6);
             this.Controls.Add(this.metroSetLabel3);
-            this.Controls.Add(this.metroSetLabel2);
-            this.Controls.Add(this.metroSetLabel1);
             this.Controls.Add(this.btnDeleteUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cmbUnit);
@@ -716,6 +704,10 @@
             this.Controls.Add(this.lblTotalCarbohydrate);
             this.Controls.Add(this.lblTotalFat);
             this.Controls.Add(this.lblTotalProtein);
+            this.Controls.Add(this.metroSetLabel2);
+            this.Controls.Add(this.metroSetLabel5);
+            this.Controls.Add(this.metroSetLabel1);
+            this.Controls.Add(this.metroSetLabel7);
             this.Controls.Add(this.lblTotalCalorie);
             this.Controls.Add(this.dgvEklenenOgun);
             this.Controls.Add(this.dgvOgunListele);
@@ -777,11 +769,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Gram1;
         private MetroSet_UI.Controls.MetroSetButton btnDelete;
         private MetroSet_UI.Controls.MetroSetButton btnDeleteUpdate;
-        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
-        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel2;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel3;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel6;
-        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel4;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel7;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel2;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel5;
     }
 }
