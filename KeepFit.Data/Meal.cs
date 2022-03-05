@@ -30,7 +30,7 @@ namespace KeepFit.Data
             {
                 foreach (var y in e.OldItems)
                 {                    
-                    //FillPropp();
+                    FillPropp();
                 }
             }
             if (e.Action == NotifyCollectionChangedAction.Move)

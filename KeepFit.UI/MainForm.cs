@@ -32,8 +32,7 @@ namespace KeepFit.UI
         private void MainForm_Load(object sender, EventArgs e)
         {
 
-            dtpMealDate.MaxDate = DateTime.Now;
-          
+            dtpMealDate.MaxDate = DateTime.Now;          
             ListMeals();
             FillCharts();
         }
@@ -47,6 +46,12 @@ namespace KeepFit.UI
                 {
 
                     ObservableCollection<MealsFoods> foods = item.Foods;
+                    decimal TotalCalorie = 0;
+                   
+                    foreach (var fuud in foods)
+                    {
+                        TotalCalorie += fuud.Calorie;                        
+                    }
                     //TODO
                     //Meal kısmının ana paneli.
                     Panel panel = new Panel()
@@ -87,7 +92,7 @@ namespace KeepFit.UI
                     };
                     Label totalCalori = new Label()
                     {
-                        Text = "Meal Total Calorie :" + item.TotalCalorie,
+                        Text = "Meal Total Calorie :" + TotalCalorie,
                         Height = 10,
                         AutoSize = true,
                         Location = new Point(panel.Width - 230, label2.Top),
@@ -170,7 +175,12 @@ namespace KeepFit.UI
             {
                 if (dtpMealDate.Value.Date == meal.CreateTime.Date)
                 {
-                    totalCalorie += meal.TotalCalorie;
+                    decimal mealCalori = 0;
+                    foreach (var food in meal.Foods)
+                    {
+                        mealCalori+=food.Calorie;
+                    }
+                     totalCalorie += mealCalori;
                 }
             }
             decimal showingCalorie = recomendedCalorie - totalCalorie;
@@ -219,10 +229,16 @@ namespace KeepFit.UI
             {
                 if (dtpMealDate.Value.Date == item.CreateTime.Date)
                 {
+                    decimal mealsProtein = 0;
+                    decimal mealsFat = 0;
+                    foreach (var food in item.Foods)
+                    {
+                        mealsFat += food.Fat;
+                        mealsProtein+=food.Protein;
+                    }
 
-
-                    totalProtein += (double)item.TotalProtein;
-                    totalFat += (double)item.TotalFat;
+                    totalProtein += (double)mealsProtein;
+                    totalFat += (double)mealsFat;
 
                 }
             }
