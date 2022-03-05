@@ -50,7 +50,7 @@
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.Silver;
             this.metroSetControlBox1.ForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.IsDerivedStyle = true;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(467, 19);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(464, 44);
             this.metroSetControlBox1.MaximizeBox = false;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -194,7 +194,7 @@
             this.btnRegister.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnRegister.HoverTextColor = System.Drawing.Color.White;
             this.btnRegister.IsDerivedStyle = true;
-            this.btnRegister.Location = new System.Drawing.Point(15, 621);
+            this.btnRegister.Location = new System.Drawing.Point(15, 599);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnRegister.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -236,7 +236,7 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));

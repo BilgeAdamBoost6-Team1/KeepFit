@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="metroSetLabel1.Text" xml:space="preserve">
+  <data name="metroSetLabel5.Text" xml:space="preserve">
     <value>The KeepFit app was designed to accompany his diet. It will guide you by calculating the recommended  calorie  specifically for you and guide you to calculate the calories of the foods you consume during the day.</value>
   </data>
 </root>

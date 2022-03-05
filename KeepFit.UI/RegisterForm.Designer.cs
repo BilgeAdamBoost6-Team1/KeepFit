@@ -69,7 +69,7 @@
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
             this.metroSetControlBox1.IsDerivedStyle = true;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(644, 19);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(667, 29);
             this.metroSetControlBox1.MaximizeBox = false;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -523,7 +523,7 @@
             this.dtpBirthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtpBirthdate.Location = new System.Drawing.Point(182, 132);
             this.dtpBirthdate.Name = "dtpBirthdate";
-            this.dtpBirthdate.Size = new System.Drawing.Size(200, 27);
+            this.dtpBirthdate.Size = new System.Drawing.Size(200, 23);
             this.dtpBirthdate.TabIndex = 4;
             // 
             // cmbHeight
@@ -991,9 +991,9 @@
             this.panel1.Controls.Add(this.txtSurName);
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(12, 89);
+            this.panel1.Location = new System.Drawing.Point(12, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(768, 475);
+            this.panel1.Size = new System.Drawing.Size(768, 491);
             this.panel1.TabIndex = 15;
             // 
             // pictureBox1
@@ -1009,7 +1009,7 @@
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
