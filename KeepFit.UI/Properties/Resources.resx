@@ -118,22 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="keep fı" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\keep fı.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="main menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4944523" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4944523.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="favpng_red-eye-symbol1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\favpng_red-eye-symbol1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="meal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\meal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="favpng_red-eye-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\favpng_red-eye-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="deleteButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deleteButton .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="foodForm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foodForm1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="keep fı" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keep fı.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="favpng_red-eye-symbol2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\favpng_red-eye-symbol2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foodform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foodform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4944523" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4944523.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deleteButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deleteButton .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main menu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main menu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="favpng_red-eye-symbol1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\favpng_red-eye-symbol1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foodForm11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foodForm11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
