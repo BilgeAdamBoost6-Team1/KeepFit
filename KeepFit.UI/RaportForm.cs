@@ -16,7 +16,7 @@ using System.Windows.Forms;
 namespace KeepFit.UI
 {
     public partial class RaportForm : MetroSetForm
-    {//dgvUserWeekFoods
+    {
         private readonly AppDbContext db;
         private readonly User logUser;
         MonthPicker monthPicker = new MonthPicker();
@@ -31,6 +31,7 @@ namespace KeepFit.UI
             monthPicker.Width = 150;
             monthPicker.Location = new Point(groupBox4.Width - monthPicker.Width, 0);
             monthPicker.MaxDate = DateTime.Now;
+            //monthPicker.MinDate = new DateTime((DateTime.Now.Year),01,01);
             monthPicker.ValueChanged += monthPicker_ValueChanged;
             groupBox4.Controls.Add(monthPicker);
 
@@ -324,12 +325,12 @@ namespace KeepFit.UI
             else
                 lblAllAvgMonth.Text = "0";
 
-            lblAllBreakFastMonthAvg.Text = MonthlyCaloriUser(MealType.Breakfast, mealList);
-            lblAllBrunchMonthAvg.Text = MonthlyCaloriUser(MealType.Brunch, mealList);
-            lblAllLunchMonthAvg.Text = MonthlyCaloriUser(MealType.Lunch, mealList);
-            lblAllDinnerMonthAvg.Text = MonthlyCaloriUser(MealType.Dinner, mealList);
-            lblAllSnackMonthAvg.Text = MonthlyCaloriUser(MealType.Snack, mealList);
-            lblAllSupperMonthAvg.Text = MonthlyCaloriUser(MealType.Supper, mealList);
+            lblAllBreakFastMonthAvg.Text = MonthlyCaloriUser(MealType.Breakfast, db.Meal.ToList());
+            lblAllBrunchMonthAvg.Text = MonthlyCaloriUser(MealType.Brunch, db.Meal.ToList());
+            lblAllLunchMonthAvg.Text = MonthlyCaloriUser(MealType.Lunch, db.Meal.ToList());
+            lblAllDinnerMonthAvg.Text = MonthlyCaloriUser(MealType.Dinner, db.Meal.ToList());
+            lblAllSnackMonthAvg.Text = MonthlyCaloriUser(MealType.Snack, db.Meal.ToList());
+            lblAllSupperMonthAvg.Text = MonthlyCaloriUser(MealType.Supper, db.Meal.ToList());
 
             lblUserBreakFastFoodMonth.Text = "-";
             lblUserBrunchFoodMonth.Text = "-";
@@ -431,5 +432,18 @@ namespace KeepFit.UI
             MontlyReport();
         }
 
+        private void RaportForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //MainForm mainForm = new MainForm(db, logUser);
+            //mainForm.Show();
+            //this.Close();                
+        }
+
+        private void RaportForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainForm mainForm = new MainForm(db, logUser);
+            mainForm.Show();
+            this.Hide();
+        }
     }
 }

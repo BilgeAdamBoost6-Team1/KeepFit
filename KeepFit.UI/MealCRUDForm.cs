@@ -26,8 +26,9 @@ namespace KeepFit.UI
         }
         private void MealCRUDForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MealForm mealForm = new MealForm(db, logUser);
-            mealForm.Show();
+            MainForm mainForm = new MainForm(db, logUser);
+            mainForm.Show();
+            this.Hide();
         }
         private void deleteMealToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -119,6 +120,11 @@ namespace KeepFit.UI
         private void MealCRUDForm_Load(object sender, EventArgs e)
         {
             mealListele();
+        }
+
+        private void MealCRUDForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

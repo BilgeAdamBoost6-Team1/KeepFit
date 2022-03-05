@@ -27,38 +27,25 @@ namespace KeepFit.UI
             this.logUser = logUser;
 
         }
+    
 
         private void MainForm_Load(object sender, EventArgs e)
         {
 
-            //Food food = new Food()
-            //{
-            //    FoodName ="Portakal",
-            //    Fat=1,
-            //    Protein=1,
-            //    Picture= "https://pics.clipartpng.com/Orange_PNG_Clipart-235.png",
-            //    FoodType=FoodType.Fruits,
-            //     Calorie=10,
-            //     Carbohydrate=10,
-
-            //};
-            //Meal meal = db.Meal.FirstOrDefault(x=>x.MealId==6);
-            //meal.Foods.Add(food);
-            //db.SaveChanges();
             dtpMealDate.MaxDate = DateTime.Now;
+          
             ListMeals();
             FillCharts();
-
         }
 
         private void ListMeals()
         {
             flpMeals.Controls.Clear();
-            foreach (var item in logUser.Meals.ToList())
+            foreach (var item in db.Meal.ToList())
             {
                 if (item.CreateTime.Date == dtpMealDate.Value.Date && item.UserId == logUser.UserId)
                 {
-                     
+
                     ObservableCollection<MealsFoods> foods = item.Foods;
                     //TODO
                     //Meal kısmının ana paneli.
@@ -86,7 +73,7 @@ namespace KeepFit.UI
                         Left = 10,
                         BorderStyle = BorderStyle.FixedSingle,
                         AutoSize = true
-                        
+
                     };
                     FlowLayoutPanel foodList = new FlowLayoutPanel()
                     {
@@ -115,8 +102,8 @@ namespace KeepFit.UI
                         Tag = item.MealId,
                     };
                     foreach (var food in foods)
-                    {
-                       
+                    {                      
+        
                             PictureBox foodPicture = new PictureBox()
                             {
                                 Height = 70,
@@ -137,9 +124,9 @@ namespace KeepFit.UI
                                 AutoSize = true,
 
                             };
-                            foodList.Controls.Add(foodName);
+                            foodList.Controls.Add(foodName);                      
 
-                       
+
                     }
 
                     deleteButton.Click += paneldelete_Click;
@@ -163,7 +150,7 @@ namespace KeepFit.UI
                 Meal deleteMeal = new Meal();
                 deleteMeal = db.Meal.FirstOrDefault(x => x.MealId == (int)deleteMealId.Tag);
                 db.Meal.Remove(deleteMeal);
-               
+
                 db.SaveChanges();
             }
             FillCharts();
@@ -233,10 +220,10 @@ namespace KeepFit.UI
                 if (dtpMealDate.Value.Date == item.CreateTime.Date)
                 {
 
-                    
-                        totalProtein += (double)item.TotalProtein;
-                        totalFat += (double)item.TotalFat;
-                    
+
+                    totalProtein += (double)item.TotalProtein;
+                    totalFat += (double)item.TotalFat;
+
                 }
             }
 
@@ -262,15 +249,15 @@ namespace KeepFit.UI
 
             if (logUser.RecomendedCalorie >= 1500 & logUser.RecomendedCalorie <= 2000)
             {
-                recomendedFat = 50;
+                recomendedFat = 70;
             }
             else if (logUser.RecomendedCalorie > 2000 & logUser.RecomendedCalorie <= 2500)
             {
-                recomendedFat = 67;
+                recomendedFat = 90;
             }
             else if (logUser.RecomendedCalorie > 2500)
             {
-                recomendedFat = 83;
+                recomendedFat = 100;
             }
             double showingFat = recomendedFat - totalProtein;
             if (showingFat < 0)
@@ -296,33 +283,35 @@ namespace KeepFit.UI
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-            FoodForm foodForm = new FoodForm(db);
-            foodForm.ShowDialog();
+            FoodForm foodForm = new FoodForm(db, logUser);
+            foodForm.Show();
+            this.Hide();
         }
 
         private void btnAddMeal_Click(object sender, EventArgs e)
         {
-            MealCRUDForm mealForm = new MealCRUDForm(db, logUser);           
-            DialogResult result=mealForm.ShowDialog();         
-            ListMeals();
-            FillCharts();
+            MealCRUDForm mealForm = new MealCRUDForm(db, logUser);
+            mealForm.Show();
+            this.Hide();
         }
 
         private void btnRaport_Click(object sender, EventArgs e)
         {
             RaportForm raportForm = new RaportForm(db, logUser);
-            raportForm.ShowDialog();
+            raportForm.Show();
+            this.Close();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
             ProfileForm profileForm = new ProfileForm(db, logUser);
-            profileForm.ShowDialog();
+            profileForm.Show();
+            this.Hide();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-          
+           
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -330,6 +319,11 @@ namespace KeepFit.UI
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

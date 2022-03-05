@@ -15,24 +15,13 @@ namespace KeepFit.Data
         {
             this.Foods = new ObservableCollection<MealsFoods>();
             Foods.CollectionChanged += HandleChange;
-
-            //Foods.CollectionChanged += new System.Collections.Specialized.NotifyCollectionChangedEventHandler(delegate (object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-            //{
-                
-            //    if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add /*|| e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove*/ )
-            //    {
-            //       FillPropp();
-            //    }
-            //});
-
         }
         private void HandleChange(object sender,NotifyCollectionChangedEventArgs e)
         {
             if(e.NewItems!=null)
             {
                 foreach (var x in e.NewItems)
-                {
-                    
+                {                    
                     FillPropp();
                 }
 
@@ -40,14 +29,13 @@ namespace KeepFit.Data
             if(e.OldItems!=null)
             {
                 foreach (var y in e.OldItems)
-                {
-                    //TODO  DİKKAT
+                {                    
                     //FillPropp();
                 }
             }
             if (e.Action == NotifyCollectionChangedAction.Move)
             {
-                
+               
             }
         }
         public int MealId { get; set; }

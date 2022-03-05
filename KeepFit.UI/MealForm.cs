@@ -236,6 +236,7 @@ namespace KeepFit.UI
                 logUser.Meals.Add(meal);
                 db.SaveChanges();
                 MessageBox.Show("Meal added");
+                this.Close();
             }
             else
             {

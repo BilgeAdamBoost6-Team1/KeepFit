@@ -16,10 +16,13 @@ namespace KeepFit.UI
     public partial class FoodForm : MetroSetForm
     {
         private readonly AppDbContext db;
-        public FoodForm(AppDbContext db)
+        private readonly User logUser;
+
+        public FoodForm(AppDbContext db,User logUser)
         {
             InitializeComponent();
             this.db = db;
+            this.logUser = logUser;
             FoodList();   
             
         }
@@ -146,6 +149,13 @@ namespace KeepFit.UI
                 pboFood.ImageLocation = imageurl;
                 pboFood.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+        }
+
+        private void FoodForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainForm mainForm = new MainForm(db, logUser);
+            mainForm.Show();
+            this.Hide();
         }
     }
 }

@@ -21,7 +21,7 @@ namespace KeepFit.UI
         private readonly AppDbContext db;
         private readonly User logUser;
         bool status = true;
-       
+
 
 
         public ProfileForm(AppDbContext db, User logUser)
@@ -46,7 +46,7 @@ namespace KeepFit.UI
             lblBirthdate1.Text = logUser.BirthDate.ToShortDateString();
             var gender = logUser.Gender.ToString();
             lblGender1.Text = gender;
-           
+
         }
 
         private void ProfileForm_Load(object sender, EventArgs e)
@@ -103,11 +103,11 @@ namespace KeepFit.UI
 
         private void UserUpdate()
         {
-            if (!string.IsNullOrEmpty(txtPassword.Text)&&!string.IsNullOrEmpty(txtPasswordAgain.Text))
+            if (!string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtPasswordAgain.Text))
             {
-                int oldPassword =Convert.ToInt32( logUser.Password);
-                int newPassword = Convert.ToInt32(txtPassword.Text);
-                if (oldPassword==newPassword)
+                string oldPassword = (logUser.Password);
+                string newPassword = (txtPassword.Text);
+                if (oldPassword == newPassword)
                 {
                     MessageBox.Show("Old password and new password shouldn't be same.");
                 }
@@ -118,11 +118,11 @@ namespace KeepFit.UI
                 }
                 else
                 {
-                    logUser.Height= Convert.ToInt32(cmbHeight.SelectedItem);
-                    logUser.Weight= Convert.ToInt32(cmbWeight.SelectedItem);
-                    logUser.Goal= (Goal)cmbGoal.SelectedItem;
-                    logUser.LifeStyle= (LifeStyle)cmbLifeStyle.SelectedItem;
-                    logUser.Password= txtPassword.Text;
+                    logUser.Height = Convert.ToInt32(cmbHeight.SelectedItem);
+                    logUser.Weight = Convert.ToInt32(cmbWeight.SelectedItem);
+                    logUser.Goal = (Goal)cmbGoal.SelectedItem;
+                    logUser.LifeStyle = (LifeStyle)cmbLifeStyle.SelectedItem;
+                    logUser.Password = txtPassword.Text;
 
                     db.SaveChanges();
                     MessageBox.Show("Successfull update.");
@@ -145,11 +145,11 @@ namespace KeepFit.UI
             smtp.Host = "smtp-mail.outlook.com";
             smtp.EnableSsl = true;
             ePosta.To.Add("keepfitTeam1@outlook.com");
-            ePosta.From = new MailAddress("keepfitTeam1@outlook.com");           
-            
+            ePosta.From = new MailAddress("keepfitTeam1@outlook.com");
+
             ePosta.Subject = konu;
-            
-            ePosta.Body = icerik;      
+
+            ePosta.Body = icerik;
 
             object userState = ePosta;
             bool kontrol = true;
@@ -170,12 +170,12 @@ namespace KeepFit.UI
         {
             Gonder("user experience", rtbExperience.Text);
         }
-        
+
         private void rtbExperience_TextChanged(object sender)
         {
-            
+
             int character = Convert.ToInt32(lblCharacter.Text);
-            if (character<=0)
+            if (character <= 0)
             {
                 btnSend.Enabled = false;
             }
@@ -184,7 +184,14 @@ namespace KeepFit.UI
                 character = character - 1;
                 lblCharacter.Text = Convert.ToString(character);
             }
-            
+
+        }
+
+        private void ProfileForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainForm mainForm = new MainForm(db, logUser);
+            mainForm.Show();
+            this.Hide();
         }
     }
 }

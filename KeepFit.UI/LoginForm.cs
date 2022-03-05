@@ -54,13 +54,13 @@ namespace KeepFit.UI
                     if (status == "new")
                     {
                         WelcomeForm frm = new WelcomeForm(db, logUser);
-                        frm.ShowDialog();
+                        frm.Show();
                         this.Hide();
                     }
                     else
                     {
                         MainForm mainForm = new MainForm(db, logUser);
-                        mainForm.ShowDialog();
+                        mainForm.Show();
                         this.Hide();
                     }
                 }

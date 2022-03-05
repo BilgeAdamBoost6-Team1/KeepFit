@@ -30,21 +30,21 @@ namespace KeepFit.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.btnAddMeal = new MetroSet_UI.Controls.MetroSetButton();
             this.dtpMealDate = new System.Windows.Forms.DateTimePicker();
             this.dgvOgunlerim = new System.Windows.Forms.DataGridView();
+            this.MealId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MealType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteMealToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateMealToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvListelenecekYemek = new System.Windows.Forms.DataGridView();
             this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.MealId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MealType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgunlerim)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListelenecekYemek)).BeginInit();
@@ -126,14 +126,14 @@ namespace KeepFit.UI
             this.MealName,
             this.MealType});
             this.dgvOgunlerim.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOgunlerim.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOgunlerim.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOgunlerim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgvOgunlerim.Location = new System.Drawing.Point(15, 197);
             this.dgvOgunlerim.MultiSelect = false;
@@ -145,6 +145,25 @@ namespace KeepFit.UI
             this.dgvOgunlerim.TabIndex = 8;
             this.dgvOgunlerim.SelectionChanged += new System.EventHandler(this.dgvOgunlerim_SelectionChanged);
             this.dgvOgunlerim.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvOgunlerim_MouseDown);
+            // 
+            // MealId
+            // 
+            this.MealId.HeaderText = "Meal Id";
+            this.MealId.Name = "MealId";
+            this.MealId.ReadOnly = true;
+            this.MealId.Visible = false;
+            // 
+            // MealName
+            // 
+            this.MealName.HeaderText = "Meal Name";
+            this.MealName.Name = "MealName";
+            this.MealName.ReadOnly = true;
+            // 
+            // MealType
+            // 
+            this.MealType.HeaderText = "Meal Type";
+            this.MealType.Name = "MealType";
+            this.MealType.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -177,14 +196,14 @@ namespace KeepFit.UI
             this.dgvListelenecekYemek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListelenecekYemek.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FoodName});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListelenecekYemek.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListelenecekYemek.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListelenecekYemek.Location = new System.Drawing.Point(565, 197);
             this.dgvListelenecekYemek.Name = "dgvListelenecekYemek";
             this.dgvListelenecekYemek.ReadOnly = true;
@@ -212,25 +231,6 @@ namespace KeepFit.UI
             this.metroSetLabel1.ThemeAuthor = "Narwin";
             this.metroSetLabel1.ThemeName = "MetroLite";
             // 
-            // MealId
-            // 
-            this.MealId.HeaderText = "Meal Id";
-            this.MealId.Name = "MealId";
-            this.MealId.ReadOnly = true;
-            this.MealId.Visible = false;
-            // 
-            // MealName
-            // 
-            this.MealName.HeaderText = "Meal Name";
-            this.MealName.Name = "MealName";
-            this.MealName.ReadOnly = true;
-            // 
-            // MealType
-            // 
-            this.MealType.HeaderText = "Meal Type";
-            this.MealType.Name = "MealType";
-            this.MealType.ReadOnly = true;
-            // 
             // MealCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -250,6 +250,7 @@ namespace KeepFit.UI
             this.TextColor = System.Drawing.Color.White;
             this.ThemeName = "MetroDark";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MealCRUDForm_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MealCRUDForm_FormClosed);
             this.Load += new System.EventHandler(this.MealCRUDForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgunlerim)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

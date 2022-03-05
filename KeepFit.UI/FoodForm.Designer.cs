@@ -508,6 +508,7 @@
             this.Style = MetroSet_UI.Enums.Style.Dark;
             this.TextColor = System.Drawing.Color.White;
             this.ThemeName = "MetroDark";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FoodForm_FormClosing);
             this.Load += new System.EventHandler(this.FoodForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).EndInit();
             this.metroSetContextMenuStrip1.ResumeLayout(false);
