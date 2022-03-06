@@ -16,49 +16,41 @@ namespace KeepFit.Data
             this.Foods = new ObservableCollection<MealsFoods>();
             Foods.CollectionChanged += HandleChange;
         }
-        private void HandleChange(object sender,NotifyCollectionChangedEventArgs e)
+        private void HandleChange(object sender, NotifyCollectionChangedEventArgs e)
         {
-            if(e.NewItems!=null)
+            if (e.NewItems != null)
             {
                 foreach (var x in e.NewItems)
-                {                    
+                {
                     FillPropp();
                 }
 
             }
-            if(e.OldItems!=null)
+            if (e.OldItems != null)
             {
                 foreach (var y in e.OldItems)
-                {                    
+                {
                     FillPropp();
                 }
             }
             if (e.Action == NotifyCollectionChangedAction.Move)
             {
-               
+
             }
         }
         public int MealId { get; set; }
         public string MealName { get; set; }
-
-        public virtual ObservableCollection<MealsFoods> Foods  {  get;  set;  }
-
+        public virtual ObservableCollection<MealsFoods> Foods { get; set; }
         public decimal TotalCalorie { get; set; }
-
         public decimal TotalProtein { get; set; }
-
         public decimal TotalFat { get; set; }
-
         public decimal TotalCarbohydrate { get; set; }
-
         public decimal TotalGram { get; set; }
-
         public MealType MealType { get; set; }
         public DateTime CreateTime { get; set; } = DateTime.Now;
         [ForeignKey("User")]
         public int UserId { get; set; }
         public User User { get; set; }
-
         private void FillPropp()
         {
             TotalCalorie = 0;
@@ -78,7 +70,6 @@ namespace KeepFit.Data
     }
     public enum MealType
     {
-        //öğünler
         Breakfast, Brunch, Lunch, Dinner, Supper, Snack
     }
 }

@@ -17,14 +17,12 @@ namespace KeepFit.UI
     {
         private readonly AppDbContext db;
         private readonly User logUser;
-
-        public FoodForm(AppDbContext db,User logUser)
+        public FoodForm(AppDbContext db, User logUser)
         {
             InitializeComponent();
             this.db = db;
             this.logUser = logUser;
-            FoodList();   
-            
+            FoodList();
         }
         private void FoodList()
         {
@@ -38,7 +36,7 @@ namespace KeepFit.UI
                 dgvFoods.ClearSelection();
                 dgvFoods.Rows[hti.RowIndex].Selected = true;
                 metroSetContextMenuStrip1.Show(dgvFoods, new Point(e.X, e.Y));
-            } 
+            }
         }
         private void btnAddFood_Click(object sender, EventArgs e)
         {
@@ -77,44 +75,42 @@ namespace KeepFit.UI
                 int id = (int)dgvFoods.SelectedRows[0].Cells[0].Value;
                 var updateFood = db.Food.Where(x => x.FoodId == id).FirstOrDefault();
                 updateFood.FoodName = txtFoodName.Text;
-                updateFood.FoodType =(foodType)cmbFoodType.SelectedItem;
+                updateFood.FoodType = (foodType)cmbFoodType.SelectedItem;
                 updateFood.Picture = txtPicture.Text;
                 updateFood.Gram = 100;
                 updateFood.Calorie = nudCalorie.Value;
                 updateFood.Fat = nudFat.Value;
                 updateFood.Carbohydrate = nudCarbonhydrate.Value;
                 updateFood.Protein = nudProtein.Value;
-                if (db.SaveChanges()>0)
+                if (db.SaveChanges() > 0)
                 {
                     MessageBox.Show("Food İnformation Updated");
-                    txtFoodName.Text="";
+                    txtFoodName.Text = "";
                     txtPicture.Text = "";
                     cmbFoodType.SelectedIndex = 0;
                     cmbFoodType.SelectedIndex = 0;
-                    nudCalorie.Value = nudCarbonhydrate.Value = nudFat.Value = nudProtein.Value = 0 ;
+                    nudCalorie.Value = nudCarbonhydrate.Value = nudFat.Value = nudProtein.Value = 0;
                     btnAddFood.Text = "Add Food";
                 }
             }
             FoodList();
         }
-
         private void FoodForm_Load(object sender, EventArgs e)
         {
             cmbFoodType.DataSource = Enum.GetValues(typeof(foodType));
         }
-        
         private void deleteFoodToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvFoods.SelectedRows.Count>0)
+            if (dgvFoods.SelectedRows.Count > 0)
             {
-                DialogResult result = MessageBox.Show("Are you sure the food you selected?","Deletion process",MessageBoxButtons.YesNo);
-                if (result==DialogResult.Yes)
+                DialogResult result = MessageBox.Show("Are you sure the food you selected?", "Deletion process", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
                     Food deleteFood = new Food();
                     int id = (int)dgvFoods.SelectedRows[0].Cells[0].Value;
                     deleteFood = db.Food.FirstOrDefault(x => x.FoodId == id);
                     db.Food.Remove(deleteFood);
-                    if (db.SaveChanges()>0)
+                    if (db.SaveChanges() > 0)
                     {
                         MessageBox.Show("selected food deleted");
                     }
@@ -122,11 +118,10 @@ namespace KeepFit.UI
                 }
             }
         }
-
         private void updateFoodToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btnAddFood.Text = "Update Food";
-            if (dgvFoods.SelectedRows.Count>0)
+            if (dgvFoods.SelectedRows.Count > 0)
             {
                 Food updateFood = new Food();
                 int id = (int)dgvFoods.SelectedRows[0].Cells[0].Value;
@@ -137,20 +132,18 @@ namespace KeepFit.UI
                 nudCalorie.Value = updateFood.Calorie;
                 nudFat.Value = updateFood.Fat;
                 nudCarbonhydrate.Value = updateFood.Carbohydrate;
-                nudProtein.Value = updateFood.Protein;            
+                nudProtein.Value = updateFood.Protein;
             }
         }
-
         private void dgvFoods_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvFoods.SelectedRows.Count>0)
+            if (dgvFoods.SelectedRows.Count > 0)
             {
                 string imageurl = (string)dgvFoods.SelectedRows[0].Cells[2].Value;
                 pboFood.ImageLocation = imageurl;
                 pboFood.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
-
         private void FoodForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainForm mainForm = new MainForm(db, logUser);

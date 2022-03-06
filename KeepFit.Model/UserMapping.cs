@@ -36,7 +36,7 @@ namespace KeepFit.Model
             Property(x => x.LifeStyle)
                 .IsRequired();
             Property(x => x.Goal)
-                .IsRequired();                                
+                .IsRequired();
 
 
         }

@@ -11,9 +11,7 @@ namespace KeepFit.Data
     {
         public User()
         {
-
             Meals = new List<Meal>();
-
         }
         public int UserId { get; set; }
         public string Email { get; set; }
@@ -26,9 +24,7 @@ namespace KeepFit.Data
         public Gender Gender { get; set; }
         public LifeStyle LifeStyle { get; set; }
         public Goal Goal { get; set; }
-
         private decimal recomendedCalorie;
-
         public decimal RecomendedCalorie
         {
             get
@@ -70,21 +66,17 @@ namespace KeepFit.Data
                 }
             }
         }
-
         public virtual List<Meal> Meals { get; set; }
-
     }
 
     public enum Gender
     {
         Male, Female, NotSpecified
     }
-
     public enum LifeStyle
     {
         Vegetarian, Vegan, GlutenFree, Ketogenic, Normal
     }
-
     public enum Goal
     {
         LoseWeight, GainWeight, KeepFit, BuildMuscle

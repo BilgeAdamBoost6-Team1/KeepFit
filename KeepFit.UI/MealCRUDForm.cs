@@ -17,18 +17,27 @@ namespace KeepFit.UI
     {
         private readonly AppDbContext db;
         private readonly User logUser;
+        Food selectedMeal = new Food();
         public MealCRUDForm(AppDbContext db, User logUser)
         {
             InitializeComponent();
             this.db = db;
             this.logUser = logUser;
-
         }
-        private void MealCRUDForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MealCRUDForm_Load(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm(db, logUser);
-            mainForm.Show();
-            this.Hide();
+            mealListele();
+        }
+        void mealListele()
+        {
+            dgvOgunlerim.Rows.Clear();
+            foreach (var item in logUser.Meals.ToList())
+            {
+                if (item.CreateTime.Date == dtpMealDate.Value.Date)
+                {
+                    dgvOgunlerim.Rows.Add(item.MealId, item.MealName, item.MealType);
+                }
+            }
         }
         private void deleteMealToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -54,18 +63,6 @@ namespace KeepFit.UI
                 MealForm updateForm = new MealForm(db, logUser, updateMeal);
                 updateForm.ShowDialog();
                 mealListele();
-            }
-        }
-        Food selectedMeal = new Food();
-        void mealListele()
-        {
-            dgvOgunlerim.Rows.Clear();
-            foreach (var item in logUser.Meals.ToList())
-            {
-                if (item.CreateTime.Date == dtpMealDate.Value.Date)
-                {
-                    dgvOgunlerim.Rows.Add(item.MealId, item.MealName, item.MealType);
-                }
             }
         }
         private void dgvOgunlerim_MouseDown(object sender, MouseEventArgs e)
@@ -98,16 +95,14 @@ namespace KeepFit.UI
                     {
                         foreach (var item in meal.Foods.ToList())
                         {
-                            dgvListelenecekYemek.Rows.Add(item.FoodName);
+                            dgvListelenecekYemek.Rows.Add(item.FoodName, item.Calorie, item.Protein, item.Carbohydrate, item.Fat);
                         }
                     }
                 }
                 catch
                 {
-
                     MessageBox.Show("vutututut");
                 }
-
             }
         }
         private void btnAddMeal_Click(object sender, EventArgs e)
@@ -116,15 +111,11 @@ namespace KeepFit.UI
             mealForm.ShowDialog();
             mealListele();
         }
-
-        private void MealCRUDForm_Load(object sender, EventArgs e)
+        private void MealCRUDForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            mealListele();
-        }
-
-        private void MealCRUDForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
+            MainForm mainForm = new MainForm(db, logUser);
+            mainForm.Show();
+            this.Hide();
         }
     }
 }

@@ -12,7 +12,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
-using System.Text.RegularExpressions;
 
 namespace KeepFit.UI
 {
@@ -21,38 +20,28 @@ namespace KeepFit.UI
         private readonly AppDbContext db;
         private readonly User logUser;
         bool status = true;
-
-
-
         public ProfileForm(AppDbContext db, User logUser)
         {
             InitializeComponent();
             this.db = db;
             this.logUser = logUser;
-
-
             cmbLifeStyle.DataSource = Enum.GetValues(typeof(LifeStyle));
             cmbGoal.DataSource = Enum.GetValues(typeof(Goal));
             btnUpdate.Enabled = false;
-
             cmbHeight.SelectedIndex = (logUser.Height) - 100;
             cmbWeight.SelectedIndex = (logUser.Weight) - 40;
             cmbGoal.SelectedItem = logUser.Goal;
             cmbLifeStyle.SelectedItem = logUser.LifeStyle;
-
             lblName1.Text = logUser.Name;
             lblSurName1.Text = logUser.Surname;
             lblEmail1.Text = logUser.Email;
             lblBirthdate1.Text = logUser.BirthDate.ToShortDateString();
             var gender = logUser.Gender.ToString();
             lblGender1.Text = gender;
-
         }
-
         private void ProfileForm_Load(object sender, EventArgs e)
         {
         }
-
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             Regex regex = new Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@!%*?+#&'()[=\"€])[A-Za-z\\d$@!%*?+#&'()[=\"€']{8,16}");
@@ -65,7 +54,6 @@ namespace KeepFit.UI
                 lblPassword.Text = "";
             }
         }
-
         private void txtPasswordAgain_TextChanged_1(object sender, EventArgs e)
         {
             if (txtPassword.Text != txtPasswordAgain.Text)
@@ -78,7 +66,6 @@ namespace KeepFit.UI
                 btnUpdate.Enabled = true;
             }
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (status == true)
@@ -93,14 +80,11 @@ namespace KeepFit.UI
                 txtPasswordAgain.UseSystemPasswordChar = true;
                 status = true;
             }
-
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             UserUpdate();
         }
-
         private void UserUpdate()
         {
             if (!string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtPasswordAgain.Text))
@@ -135,7 +119,6 @@ namespace KeepFit.UI
                 MessageBox.Show("Please fill all the areas.");
             }
         }
-
         public bool Gonder(string konu, string icerik)
         {
             MailMessage ePosta = new MailMessage();
@@ -146,11 +129,8 @@ namespace KeepFit.UI
             smtp.EnableSsl = true;
             ePosta.To.Add("keepfitTeam1@outlook.com");
             ePosta.From = new MailAddress("keepfitTeam1@outlook.com");
-
             ePosta.Subject = konu;
-
             ePosta.Body = icerik;
-
             object userState = ePosta;
             bool kontrol = true;
             try
@@ -165,15 +145,12 @@ namespace KeepFit.UI
             }
             return kontrol;
         }
-
         private void btnSendExperience_Click(object sender, EventArgs e)
         {
             Gonder("user experience", rtbExperience.Text);
         }
-
         private void rtbExperience_TextChanged(object sender)
         {
-
             int character = Convert.ToInt32(lblCharacter.Text);
             if (character <= 0)
             {
@@ -184,9 +161,7 @@ namespace KeepFit.UI
                 character = character - 1;
                 lblCharacter.Text = Convert.ToString(character);
             }
-
         }
-
         private void ProfileForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainForm mainForm = new MainForm(db, logUser);

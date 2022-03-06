@@ -17,7 +17,6 @@ namespace KeepFit.UI
     {
         AppDbContext db = new AppDbContext();
         bool passwordStatus = true;
-
         public LoginForm(string status)
         {
             InitializeComponent();
@@ -27,14 +26,12 @@ namespace KeepFit.UI
         {
             InitializeComponent();
         }
-
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
         User logUser;
         private readonly string status;
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPassword.Text))
@@ -72,7 +69,6 @@ namespace KeepFit.UI
             registerForm.Show();
             this.Hide();
         }
-
         private void pbPasswordSee_Click(object sender, EventArgs e)
         {
             if (passwordStatus == true)
@@ -86,7 +82,6 @@ namespace KeepFit.UI
                 passwordStatus = true;
             }
         }
-
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);

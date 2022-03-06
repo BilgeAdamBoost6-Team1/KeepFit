@@ -23,8 +23,8 @@ namespace KeepFit.UI
         Food selectedMeal = new Food();
         Meal mealTotal = new Meal();
         Food foodTotal = new Food();
-        ObservableCollection<MealsFoods> mealsList = new ObservableCollection<MealsFoods>();
         bool update = false;
+        ObservableCollection<MealsFoods> mealsList = new ObservableCollection<MealsFoods>();
         public MealForm(AppDbContext db, User logUser, Meal updateMeal)
         {
             InitializeComponent();
@@ -48,19 +48,25 @@ namespace KeepFit.UI
             this.logUser = logUser;
             btnDeleteUpdate.Visible = false;
         }
-        void mealTypeComboBox()
+        private void HandleChange(object sender, NotifyCollectionChangedEventArgs e)
         {
-            cmbMealType.DataSource = Enum.GetValues(typeof(MealType));
-            cmbUnit.DataSource = Enum.GetValues(typeof(Unit));
-            cmbUnit.SelectedIndex = 0;
-            cmbMealType.SelectedIndex = 0;
-        }
-        private void MealForm_Load(object sender, EventArgs e)
-        {
-            dtpMealDate.MaxDate = DateTime.Now;
-            fillFoodList();
-            mealTypeComboBox();
-            mealsList.CollectionChanged += HandleChange;
+            if (e.NewItems != null)
+            {
+                foreach (var x in e.NewItems)
+                {
+                    totalValues();
+                }
+            }
+            if (e.OldItems != null)
+            {
+                foreach (var y in e.OldItems)
+                {
+                    totalValues();
+                }
+            }
+            if (e.Action == NotifyCollectionChangedAction.Move)
+            {
+            }
         }
         private void totalValues()
         {
@@ -83,25 +89,12 @@ namespace KeepFit.UI
             lblGelenFat.Text = totalFat.ToString();
             lblGelenGram.Text = totalGram.ToString();
         }
-        private void HandleChange(object sender, NotifyCollectionChangedEventArgs e)
+        void mealTypeComboBox()
         {
-            if (e.NewItems != null)
-            {
-                foreach (var x in e.NewItems)
-                {
-                    totalValues();
-                }
-            }
-            if (e.OldItems != null)
-            {
-                foreach (var y in e.OldItems)
-                {
-                    totalValues();
-                }
-            }
-            if (e.Action == NotifyCollectionChangedAction.Move)
-            {
-            }
+            cmbMealType.DataSource = Enum.GetValues(typeof(MealType));
+            cmbUnit.DataSource = Enum.GetValues(typeof(Unit));
+            cmbUnit.SelectedIndex = 0;
+            cmbMealType.SelectedIndex = 0;
         }
         void foodList()
         {
@@ -148,6 +141,45 @@ namespace KeepFit.UI
                     default:
                         break;
                 }
+            }
+        }
+        private void MealForm_Load(object sender, EventArgs e)
+        {
+            dtpMealDate.MaxDate = DateTime.Now;
+            fillFoodList();
+            mealTypeComboBox();
+            mealsList.CollectionChanged += HandleChange;
+        }
+        private void dtpMealDate_ValueChanged(object sender, EventArgs e)
+        {
+            fillFoodList();
+        }
+        private void btnAddMeal_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMealName.Text))
+            {
+                MessageBox.Show("Meal Name required ");
+                return;
+            }
+            if (btnAddMeal.Text == "Add Meal")
+            {
+                Meal meal = new Meal();
+                meal.MealName = txtMealName.Text;
+                meal.MealType = (MealType)cmbMealType.SelectedValue;
+                meal.Foods = mealsList;
+                meal.CreateTime = dtpMealDate.Value;
+                logUser.Meals.Add(meal);
+                db.SaveChanges();
+                MessageBox.Show("Meal added");
+                this.Close();
+            }
+            else
+            {
+                updateMeal.MealName = txtMealName.Text;
+                updateMeal.MealType = (MealType)cmbMealType.SelectedValue;
+                db.SaveChanges();
+                MessageBox.Show("Meal updated");
+                this.Close();
             }
         }
         private void btnAddFood_Click(object sender, EventArgs e)
@@ -213,38 +245,6 @@ namespace KeepFit.UI
                     db.SaveChanges();
                     foodList();
                 }
-            }
-        }
-        private void dtpMealDate_ValueChanged(object sender, EventArgs e)
-        {
-            fillFoodList();
-        }
-        private void btnAddMeal_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtMealName.Text))
-            {
-                MessageBox.Show("Meal Name required ");
-                return;
-            }
-            if (btnAddMeal.Text == "Add Meal")
-            {
-                Meal meal = new Meal();
-                meal.MealName = txtMealName.Text;
-                meal.MealType = (MealType)cmbMealType.SelectedValue;
-                meal.Foods = mealsList;
-                meal.CreateTime = dtpMealDate.Value;
-                logUser.Meals.Add(meal);
-                db.SaveChanges();
-                MessageBox.Show("Meal added");
-                this.Close();
-            }
-            else
-            {
-                updateMeal.MealName = txtMealName.Text;
-                updateMeal.MealType = (MealType)cmbMealType.SelectedValue;
-                db.SaveChanges();
-                MessageBox.Show("Meal updated");
-                this.Close();
             }
         }
         private void btnDelete_Click(object sender, EventArgs e)

@@ -17,7 +17,6 @@ namespace KeepFit.UI
     {
         private readonly AppDbContext db;
         private readonly User logUser;
-
         public WelcomeForm(AppDbContext db, User logUser)
         {
             InitializeComponent();
@@ -25,15 +24,13 @@ namespace KeepFit.UI
             this.logUser = logUser;
             lblHelloUser.Text = logUser.Name.ToString();
         }
-
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
             lblHelloUser.Text = logUser.Name.ToString();
-        }   
-
+        }
         private void btnStart_Click(object sender, EventArgs e)
         {
-            MainForm frm = new MainForm(db,logUser);
+            MainForm frm = new MainForm(db, logUser);
             frm.Show();
             this.Hide();
         }

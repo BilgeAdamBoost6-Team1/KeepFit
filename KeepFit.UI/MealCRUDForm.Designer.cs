@@ -44,6 +44,11 @@ namespace KeepFit.UI
             this.updateMealToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvListelenecekYemek = new System.Windows.Forms.DataGridView();
             this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Protein = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Carbohydrate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgunlerim)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -58,8 +63,8 @@ namespace KeepFit.UI
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
             this.metroSetControlBox1.IsDerivedStyle = true;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(974, 11);
-            this.metroSetControlBox1.MaximizeBox = true;
+            this.metroSetControlBox1.Location = new System.Drawing.Point(1044, 12);
+            this.metroSetControlBox1.MaximizeBox = false;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.MaximizeNormalForeColor = System.Drawing.Color.Gray;
@@ -195,7 +200,11 @@ namespace KeepFit.UI
             this.dgvListelenecekYemek.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvListelenecekYemek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListelenecekYemek.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FoodName});
+            this.FoodName,
+            this.Calorie,
+            this.Protein,
+            this.Carbohydrate,
+            this.Fat});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
@@ -217,19 +226,59 @@ namespace KeepFit.UI
             this.FoodName.Name = "FoodName";
             this.FoodName.ReadOnly = true;
             // 
+            // Calorie
+            // 
+            this.Calorie.HeaderText = "Calorie";
+            this.Calorie.Name = "Calorie";
+            this.Calorie.ReadOnly = true;
+            // 
+            // Protein
+            // 
+            this.Protein.HeaderText = "Protein";
+            this.Protein.Name = "Protein";
+            this.Protein.ReadOnly = true;
+            // 
+            // Carbohydrate
+            // 
+            this.Carbohydrate.HeaderText = "Carbohydrate";
+            this.Carbohydrate.Name = "Carbohydrate";
+            this.Carbohydrate.ReadOnly = true;
+            // 
+            // Fat
+            // 
+            this.Fat.HeaderText = "Fat";
+            this.Fat.Name = "Fat";
+            this.Fat.ReadOnly = true;
+            // 
+            // metroSetLabel2
+            // 
+            this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel2.IsDerivedStyle = true;
+            this.metroSetLabel2.Location = new System.Drawing.Point(565, 157);
+            this.metroSetLabel2.Name = "metroSetLabel2";
+            this.metroSetLabel2.Size = new System.Drawing.Size(100, 23);
+            this.metroSetLabel2.Style = MetroSet_UI.Enums.Style.Dark;
+            this.metroSetLabel2.StyleManager = null;
+            this.metroSetLabel2.TabIndex = 11;
+            this.metroSetLabel2.Tag = "";
+            this.metroSetLabel2.Text = "Meal Foods :";
+            this.metroSetLabel2.ThemeAuthor = "Narwin";
+            this.metroSetLabel2.ThemeName = "MetroDark";
+            // 
             // metroSetLabel1
             // 
             this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.metroSetLabel1.IsDerivedStyle = true;
-            this.metroSetLabel1.Location = new System.Drawing.Point(565, 161);
+            this.metroSetLabel1.Location = new System.Drawing.Point(15, 157);
             this.metroSetLabel1.Name = "metroSetLabel1";
             this.metroSetLabel1.Size = new System.Drawing.Size(100, 23);
-            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Dark;
             this.metroSetLabel1.StyleManager = null;
-            this.metroSetLabel1.TabIndex = 10;
-            this.metroSetLabel1.Text = "Meal Foods";
+            this.metroSetLabel1.TabIndex = 12;
+            this.metroSetLabel1.Tag = "";
+            this.metroSetLabel1.Text = "Your Meals :";
             this.metroSetLabel1.ThemeAuthor = "Narwin";
-            this.metroSetLabel1.ThemeName = "MetroLite";
+            this.metroSetLabel1.ThemeName = "MetroDark";
             // 
             // MealCRUDForm
             // 
@@ -238,11 +287,14 @@ namespace KeepFit.UI
             this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1162, 513);
             this.Controls.Add(this.metroSetLabel1);
+            this.Controls.Add(this.metroSetLabel2);
             this.Controls.Add(this.dgvListelenecekYemek);
             this.Controls.Add(this.dgvOgunlerim);
             this.Controls.Add(this.dtpMealDate);
             this.Controls.Add(this.btnAddMeal);
             this.Controls.Add(this.metroSetControlBox1);
+            this.MaximumSize = new System.Drawing.Size(1162, 513);
+            this.MinimumSize = new System.Drawing.Size(1162, 513);
             this.Name = "MealCRUDForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Style = MetroSet_UI.Enums.Style.Dark;
@@ -250,7 +302,6 @@ namespace KeepFit.UI
             this.TextColor = System.Drawing.Color.White;
             this.ThemeName = "MetroDark";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MealCRUDForm_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MealCRUDForm_FormClosed);
             this.Load += new System.EventHandler(this.MealCRUDForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgunlerim)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -269,10 +320,15 @@ namespace KeepFit.UI
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteMealToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateMealToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodName;
-        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MealId;
         private System.Windows.Forms.DataGridViewTextBoxColumn MealName;
         private System.Windows.Forms.DataGridViewTextBoxColumn MealType;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel2;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FoodName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calorie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Protein;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Carbohydrate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fat;
     }
 }

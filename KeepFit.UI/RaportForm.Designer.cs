@@ -1643,7 +1643,6 @@
             this.Text = "Report";
             this.TextColor = System.Drawing.Color.White;
             this.ThemeName = "MetroDark";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RaportForm_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RaportForm_FormClosed);
             this.Load += new System.EventHandler(this.RaportForm_Load);
             this.metroSetTabControl1.ResumeLayout(false);

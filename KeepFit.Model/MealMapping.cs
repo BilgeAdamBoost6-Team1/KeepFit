@@ -19,9 +19,7 @@ namespace KeepFit.Model
             Property(x => x.MealType)
                 .IsRequired();
             Property(x => x.CreateTime)
-                .IsRequired();       
-
+                .IsRequired();
         }
-
     }
 }

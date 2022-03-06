@@ -52,7 +52,6 @@ namespace KeepFit.UI
             {
                 if (!string.IsNullOrEmpty(txtName.ToString()) && !string.IsNullOrEmpty(txtSurName.ToString()) && !string.IsNullOrEmpty(txtPassword.ToString()) && !string.IsNullOrEmpty(txtPasswordAgain.ToString()) && cmbHeight.SelectedIndex != -1 && cmbWeight.SelectedIndex != -1)
                 {
-
                     User newUser = new User();
                     newUser.Name = txtName.Text;
                     newUser.Surname = txtSurName.Text;
@@ -67,7 +66,6 @@ namespace KeepFit.UI
                     db.User.Add(newUser);
                     db.SaveChanges();
                     MessageBox.Show("Successfull registery.");
-
                     LoginForm frm = new LoginForm("new");
                     frm.Show();
                     this.Hide();
@@ -119,7 +117,7 @@ namespace KeepFit.UI
                 lblEmailControl.Text = "";
                 btnRegister.Enabled = true;
             }
-        }                
+        }
         private void pbEye_Click(object sender, EventArgs e)
         {
             if (status == true)
@@ -140,16 +138,6 @@ namespace KeepFit.UI
             LoginForm frm = new LoginForm();
             frm.Show();
             this.Hide();
-        }
-
-        private void txtPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPassword_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

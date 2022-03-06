@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KeepFit.Model
 {
-    public class AppDbContext :DbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext()
         {
@@ -17,8 +17,7 @@ namespace KeepFit.Model
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Food> Food { get; set; }
         public virtual DbSet<Meal> Meal { get; set; }
-        public virtual DbSet<MealsFoods> MealsFoods{ get; set; }
-
+        public virtual DbSet<MealsFoods> MealsFoods { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new FoodMapping());

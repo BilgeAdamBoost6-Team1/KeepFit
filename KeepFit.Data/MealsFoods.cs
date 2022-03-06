@@ -31,6 +31,5 @@ namespace KeepFit.Data
     public enum Unit
     {
         Gram, Porsion, Slice, Spoon, Cup
-        //100gr,30gr,20gr,10gr,200gr
     }
 }

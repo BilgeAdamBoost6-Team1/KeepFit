@@ -32,7 +32,7 @@ namespace KeepFit.Model
                 .IsRequired();
             Property(x => x.Gram)
                 .IsRequired()
-                .HasPrecision(7, 2);            
+                .HasPrecision(7, 2);
 
         }
     }

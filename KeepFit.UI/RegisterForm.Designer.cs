@@ -453,7 +453,6 @@
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.WatermarkText = "";
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
-            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             // 
             // txtPasswordAgain
             // 
@@ -932,7 +931,6 @@
             this.lblPassword.TabIndex = 12;
             this.lblPassword.ThemeAuthor = "Narwin";
             this.lblPassword.ThemeName = "MetroDark";
-            this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
             // 
             // lblPasswordControl
             // 
