@@ -36,15 +36,15 @@
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.btnStart = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
-            this.metroSetLabel5 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel6 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetDivider4 = new MetroSet_UI.Controls.MetroSetDivider();
             this.metroSetLabel3 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.metroSetDivider4 = new MetroSet_UI.Controls.MetroSetDivider();
+            this.metroSetLabel6 = new MetroSet_UI.Controls.MetroSetLabel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroSetLabel5 = new MetroSet_UI.Controls.MetroSetLabel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.metroSetPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -151,7 +151,7 @@
             this.btnStart.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnStart.HoverTextColor = System.Drawing.Color.White;
             this.btnStart.IsDerivedStyle = true;
-            this.btnStart.Location = new System.Drawing.Point(32, 991);
+            this.btnStart.Location = new System.Drawing.Point(48, 570);
             this.btnStart.Name = "btnStart";
             this.btnStart.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnStart.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -179,7 +179,6 @@
             this.metroSetPanel1.Controls.Add(this.metroSetLabel6);
             this.metroSetPanel1.Controls.Add(this.pictureBox6);
             this.metroSetPanel1.Controls.Add(this.metroSetLabel2);
-            this.metroSetPanel1.Controls.Add(this.btnStart);
             this.metroSetPanel1.Controls.Add(this.pictureBox2);
             this.metroSetPanel1.Controls.Add(this.metroSetLabel1);
             this.metroSetPanel1.Controls.Add(this.pictureBox1);
@@ -189,72 +188,29 @@
             this.metroSetPanel1.Controls.Add(this.metroSetDivider2);
             this.metroSetPanel1.Controls.Add(this.metroSetDivider3);
             this.metroSetPanel1.IsDerivedStyle = true;
-            this.metroSetPanel1.Location = new System.Drawing.Point(15, 73);
+            this.metroSetPanel1.Location = new System.Drawing.Point(29, 83);
             this.metroSetPanel1.Name = "metroSetPanel1";
-            this.metroSetPanel1.Size = new System.Drawing.Size(865, 1027);
+            this.metroSetPanel1.Size = new System.Drawing.Size(870, 467);
             this.metroSetPanel1.Style = MetroSet_UI.Enums.Style.Dark;
             this.metroSetPanel1.StyleManager = null;
             this.metroSetPanel1.TabIndex = 11;
             this.metroSetPanel1.ThemeAuthor = "Narwin";
             this.metroSetPanel1.ThemeName = "MetroDark";
             // 
-            // metroSetLabel5
+            // metroSetLabel3
             // 
-            this.metroSetLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel5.IsDerivedStyle = true;
-            this.metroSetLabel5.Location = new System.Drawing.Point(42, 26);
-            this.metroSetLabel5.Name = "metroSetLabel5";
-            this.metroSetLabel5.Size = new System.Drawing.Size(366, 154);
-            this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Dark;
-            this.metroSetLabel5.StyleManager = null;
-            this.metroSetLabel5.TabIndex = 8;
-            this.metroSetLabel5.Text = resources.GetString("metroSetLabel5.Text");
-            this.metroSetLabel5.ThemeAuthor = "Narwin";
-            this.metroSetLabel5.ThemeName = "MetroDark";
-            // 
-            // metroSetLabel1
-            // 
-            this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel1.IsDerivedStyle = true;
-            this.metroSetLabel1.Location = new System.Drawing.Point(470, 301);
-            this.metroSetLabel1.Name = "metroSetLabel1";
-            this.metroSetLabel1.Size = new System.Drawing.Size(338, 46);
-            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Dark;
-            this.metroSetLabel1.StyleManager = null;
-            this.metroSetLabel1.TabIndex = 10;
-            this.metroSetLabel1.Text = "In this application, you can add and update the foods you want yourself.";
-            this.metroSetLabel1.ThemeAuthor = "Narwin";
-            this.metroSetLabel1.ThemeName = "MetroDark";
-            // 
-            // metroSetLabel2
-            // 
-            this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel2.IsDerivedStyle = true;
-            this.metroSetLabel2.Location = new System.Drawing.Point(64, 533);
-            this.metroSetLabel2.Name = "metroSetLabel2";
-            this.metroSetLabel2.Size = new System.Drawing.Size(295, 78);
-            this.metroSetLabel2.Style = MetroSet_UI.Enums.Style.Dark;
-            this.metroSetLabel2.StyleManager = null;
-            this.metroSetLabel2.TabIndex = 12;
-            this.metroSetLabel2.Text = "At the same time, reports about the foods you consume will be waiting for you in " +
-    "the \"Report Page\".";
-            this.metroSetLabel2.ThemeAuthor = "Narwin";
-            this.metroSetLabel2.ThemeName = "MetroDark";
-            // 
-            // metroSetLabel6
-            // 
-            this.metroSetLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel6.IsDerivedStyle = true;
-            this.metroSetLabel6.Location = new System.Drawing.Point(458, 780);
-            this.metroSetLabel6.Name = "metroSetLabel6";
-            this.metroSetLabel6.Size = new System.Drawing.Size(350, 79);
-            this.metroSetLabel6.Style = MetroSet_UI.Enums.Style.Dark;
-            this.metroSetLabel6.StyleManager = null;
-            this.metroSetLabel6.TabIndex = 14;
-            this.metroSetLabel6.Text = "The most important thing we expect from you is to record all your meals and what " +
-    "you consume in the application!";
-            this.metroSetLabel6.ThemeAuthor = "Narwin";
-            this.metroSetLabel6.ThemeName = "MetroDark";
+            this.metroSetLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel3.IsDerivedStyle = true;
+            this.metroSetLabel3.Location = new System.Drawing.Point(458, 873);
+            this.metroSetLabel3.Name = "metroSetLabel3";
+            this.metroSetLabel3.Size = new System.Drawing.Size(333, 70);
+            this.metroSetLabel3.Style = MetroSet_UI.Enums.Style.Dark;
+            this.metroSetLabel3.StyleManager = null;
+            this.metroSetLabel3.TabIndex = 16;
+            this.metroSetLabel3.Text = "You can also update your information on your profile page and share your user exp" +
+    "eriences with us.";
+            this.metroSetLabel3.ThemeAuthor = "Narwin";
+            this.metroSetLabel3.ThemeName = "MetroDark";
             // 
             // metroSetDivider4
             // 
@@ -272,20 +228,20 @@
             this.metroSetDivider4.ThemeName = "MetroDark";
             this.metroSetDivider4.Thickness = 1;
             // 
-            // metroSetLabel3
+            // metroSetLabel6
             // 
-            this.metroSetLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel3.IsDerivedStyle = true;
-            this.metroSetLabel3.Location = new System.Drawing.Point(458, 873);
-            this.metroSetLabel3.Name = "metroSetLabel3";
-            this.metroSetLabel3.Size = new System.Drawing.Size(333, 70);
-            this.metroSetLabel3.Style = MetroSet_UI.Enums.Style.Dark;
-            this.metroSetLabel3.StyleManager = null;
-            this.metroSetLabel3.TabIndex = 16;
-            this.metroSetLabel3.Text = "You can also update your information on your profile page and share your user exp" +
-    "eriences with us.";
-            this.metroSetLabel3.ThemeAuthor = "Narwin";
-            this.metroSetLabel3.ThemeName = "MetroDark";
+            this.metroSetLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel6.IsDerivedStyle = true;
+            this.metroSetLabel6.Location = new System.Drawing.Point(458, 780);
+            this.metroSetLabel6.Name = "metroSetLabel6";
+            this.metroSetLabel6.Size = new System.Drawing.Size(350, 79);
+            this.metroSetLabel6.Style = MetroSet_UI.Enums.Style.Dark;
+            this.metroSetLabel6.StyleManager = null;
+            this.metroSetLabel6.TabIndex = 14;
+            this.metroSetLabel6.Text = "The most important thing we expect from you is to record all your meals and what " +
+    "you consume in the application!";
+            this.metroSetLabel6.ThemeAuthor = "Narwin";
+            this.metroSetLabel6.ThemeName = "MetroDark";
             // 
             // pictureBox6
             // 
@@ -297,6 +253,21 @@
             this.pictureBox6.TabIndex = 13;
             this.pictureBox6.TabStop = false;
             // 
+            // metroSetLabel2
+            // 
+            this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel2.IsDerivedStyle = true;
+            this.metroSetLabel2.Location = new System.Drawing.Point(64, 533);
+            this.metroSetLabel2.Name = "metroSetLabel2";
+            this.metroSetLabel2.Size = new System.Drawing.Size(295, 78);
+            this.metroSetLabel2.Style = MetroSet_UI.Enums.Style.Dark;
+            this.metroSetLabel2.StyleManager = null;
+            this.metroSetLabel2.TabIndex = 12;
+            this.metroSetLabel2.Text = "At the same time, reports about the foods you consume will be waiting for you in " +
+    "the \"Report Page\".";
+            this.metroSetLabel2.ThemeAuthor = "Narwin";
+            this.metroSetLabel2.ThemeName = "MetroDark";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::KeepFit.UI.Properties.Resources.report;
@@ -307,6 +278,20 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // metroSetLabel1
+            // 
+            this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel1.IsDerivedStyle = true;
+            this.metroSetLabel1.Location = new System.Drawing.Point(470, 301);
+            this.metroSetLabel1.Name = "metroSetLabel1";
+            this.metroSetLabel1.Size = new System.Drawing.Size(338, 46);
+            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Dark;
+            this.metroSetLabel1.StyleManager = null;
+            this.metroSetLabel1.TabIndex = 10;
+            this.metroSetLabel1.Text = "In this application, you can add and update the foods you want yourself.";
+            this.metroSetLabel1.ThemeAuthor = "Narwin";
+            this.metroSetLabel1.ThemeName = "MetroDark";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::KeepFit.UI.Properties.Resources.foodForm11;
@@ -316,6 +301,20 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // metroSetLabel5
+            // 
+            this.metroSetLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel5.IsDerivedStyle = true;
+            this.metroSetLabel5.Location = new System.Drawing.Point(42, 26);
+            this.metroSetLabel5.Name = "metroSetLabel5";
+            this.metroSetLabel5.Size = new System.Drawing.Size(366, 154);
+            this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Dark;
+            this.metroSetLabel5.StyleManager = null;
+            this.metroSetLabel5.TabIndex = 8;
+            this.metroSetLabel5.Text = resources.GetString("metroSetLabel5.Text");
+            this.metroSetLabel5.ThemeAuthor = "Narwin";
+            this.metroSetLabel5.ThemeName = "MetroDark";
             // 
             // pictureBox5
             // 
@@ -333,10 +332,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(914, 1100);
+            this.ClientSize = new System.Drawing.Size(914, 625);
             this.Controls.Add(this.metroSetPanel1);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.lblHelloUser);
+            this.Controls.Add(this.btnStart);
             this.Name = "WelcomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Style = MetroSet_UI.Enums.Style.Dark;
