@@ -40,7 +40,7 @@ namespace KeepFit.UI
         }
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFoodName.Text))
+            if (string.IsNullOrEmpty(txtFoodName.Text) && string.IsNullOrEmpty(txtPicture.Text))
             {
                 MessageBox.Show("Food Name sections cannot be left blank ");
                 return;
