@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAddMeal = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.cmbMealType = new MetroSet_UI.Controls.MetroSetComboBox();
@@ -230,8 +232,8 @@
             this.dgvOgunListele.AllowUserToDeleteRows = false;
             this.dgvOgunListele.AllowUserToResizeColumns = false;
             this.dgvOgunListele.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgvOgunListele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvOgunListele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOgunListele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOgunListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOgunListele.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -244,6 +246,14 @@
             this.Fat,
             this.Gram});
             this.dgvOgunListele.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOgunListele.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOgunListele.Location = new System.Drawing.Point(3, 282);
             this.dgvOgunListele.Name = "dgvOgunListele";
             this.dgvOgunListele.ReadOnly = true;
@@ -305,8 +315,8 @@
             // 
             this.dgvEklenenOgun.AllowUserToAddRows = false;
             this.dgvEklenenOgun.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.dgvEklenenOgun.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgvEklenenOgun.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEklenenOgun.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEklenenOgun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEklenenOgun.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -318,6 +328,14 @@
             this.Carbohydrate1,
             this.Fat1,
             this.Gram1});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEklenenOgun.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEklenenOgun.Location = new System.Drawing.Point(724, 282);
             this.dgvEklenenOgun.Name = "dgvEklenenOgun";
             this.dgvEklenenOgun.ReadOnly = true;

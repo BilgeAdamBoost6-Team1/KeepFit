@@ -64,9 +64,15 @@ namespace KeepFit.UI
             {
                 if (dtpMealDate.Value.Date == item.CreateTime.Date)
                 {
-                    totalCalorie += item.TotalCalorie;
-                    chtDaily.Series["Calorie"].Points.AddXY(item.MealName, item.TotalCalorie);
-                    lbldailycal.Text += " \r\n" + item.MealName + ": " + item.TotalCalorie + " kcal";
+                  
+                    decimal mealCalori = 0;
+                    foreach (var food in item.Foods)
+                    {
+                        mealCalori += food.Calorie;
+                    }
+                    chtDaily.Series["Calorie"].Points.AddXY(item.MealName, mealCalori);
+                    lbldailycal.Text += " \r\n" + item.MealName + ": " + mealCalori + " kcal";
+                    totalCalorie += mealCalori;
                 }
             }
             chtDaily.Series["Calorie"].Points.AddXY("Total Calorie", totalCalorie);
